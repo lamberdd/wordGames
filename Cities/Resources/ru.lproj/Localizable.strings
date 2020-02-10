@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  Cities
+
+  Created by Влад Казмирчук on 1/8/20.
+  Copyright © 2020 Влад Казмирчук. All rights reserved.
+*/
+
+//MARK: General
+"cancel" = "Отмена";
+
+//MARK: Prepare screen
+"player" = "Игрок";
+
+//MARK: Game titles
+"city" = "Города";
+"country" = "Страны";
+
+//MARK: Game screen
+"you_on" = "Вам на";
+"complete_game" = "Завершить текущую игру?";
+"are_you_sure_somplete" = "Вы уверены, что хотите завершить текущую игру?";
+"finish_game" = "Закончить игру";
+"computer" = "Компьютер";

@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Указанного слова не существует :( Но если это не так, то можете добавить его."; ObjectID = "00t-Ey-gNP"; */
+"00t-Ey-gNP.text" = "The specified word does not exist :( But if it’s not, then you can add it.";
+
+/* Class = "UILabel"; text = "Не существует"; ObjectID = "6aC-Ok-lNO"; */
+"6aC-Ok-lNO.text" = "Not exist";
+
+/* Class = "UILabel"; text = "Слово"; ObjectID = "RFU-lT-4j0"; */
+"RFU-lT-4j0.text" = "Word";
+
+/* Class = "UIButton"; normalTitle = "Проверить в интернете"; ObjectID = "VP6-Ul-cFx"; */
+"VP6-Ul-cFx.normalTitle" = "Check on the Internet";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "Wwb-hO-t9m"; */
+"Wwb-hO-t9m.normalTitle" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Добавить слово"; ObjectID = "wSm-i9-0ql"; */
+"wSm-i9-0ql.normalTitle" = "Add word";

@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "Игрок 1"; ObjectID = "0Gc-eq-7xL"; */
+"0Gc-eq-7xL.text" = "Игрок 1";
+
+/* Class = "UIButton"; normalTitle = "Пропустить"; ObjectID = "5Lk-oE-JZF"; */
+"5Lk-oE-JZF.normalTitle" = "Пропустить";
+
+/* Class = "UILabel"; text = "Подсказки:"; ObjectID = "6hy-qD-fb8"; */
+"6hy-qD-fb8.text" = "Подсказки:";
+
+/* Class = "UIBarButtonItem"; title = "Закончить"; ObjectID = "72S-HW-dJ0"; */
+"72S-HW-dJ0.title" = "Закончить";
+
+/* Class = "UIBarButtonItem"; title = "Подсказка"; ObjectID = "7R4-4P-xhl"; */
+"7R4-4P-xhl.title" = "Подсказка";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "9d6-WY-JqR"; */
+"9d6-WY-JqR.text" = "0";
+
+/* Class = "UILabel"; text = "Отвечает:"; ObjectID = "Eto-44-xQC"; */
+"Eto-44-xQC.text" = "Отвечает:";
+
+/* Class = "UILabel"; text = "Название"; ObjectID = "caL-Mv-jOM"; */
+"caL-Mv-jOM.text" = "Название";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "eNY-Wa-yyB"; */
+"eNY-Wa-yyB.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Ответить"; ObjectID = "gSL-jy-IkE"; */
+"gSL-jy-IkE.normalTitle" = "Ответить";
+
+/* Class = "UILabel"; text = "Ваш счёт:"; ObjectID = "hda-aL-uMM"; */
+"hda-aL-uMM.text" = "Ваш счёт:";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "leE-hL-JJj"; */
+"leE-hL-JJj.text" = "0";
+
+/* Class = "UITextField"; placeholder = "Название города"; ObjectID = "ugn-2z-2kh"; */
+"ugn-2z-2kh.placeholder" = "Название города";

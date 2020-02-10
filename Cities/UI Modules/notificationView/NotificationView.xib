@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationView" customModule="Cities" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="1o7-Fw-uVB" id="ClI-Xf-Eth"/>
+                <outlet property="imageNotification" destination="lVp-Lh-CT1" id="4Ce-No-jXX"/>
+                <outlet property="mainView" destination="iN0-l3-epB" id="c2v-4y-Bd2"/>
+                <outlet property="textNotification" destination="5ye-HA-x6O" id="UcW-ys-TJE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="388" height="123"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1o7-Fw-uVB">
+                    <rect key="frame" x="0.0" y="0.0" width="388" height="123"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Zlk-MY-beg">
+                        <rect key="frame" x="0.0" y="0.0" width="388" height="123"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <color key="backgroundColor" white="1" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ye-HA-x6O">
+                    <rect key="frame" x="15" y="51" width="244.5" height="21"/>
+                    <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                    <color key="textColor" red="0.17884532339800266" green="0.18707239950029328" blue="0.23068026585627333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad_yellow" translatesAutoresizingMaskIntoConstraints="NO" id="lVp-Lh-CT1">
+                    <rect key="frame" x="287.5" y="19" width="85.5" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="lVp-Lh-CT1" secondAttribute="height" multiplier="1:1" id="jMV-AF-QpH"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1o7-Fw-uVB" secondAttribute="bottom" id="1Yc-B6-wkm"/>
+                <constraint firstItem="5ye-HA-x6O" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7IK-1C-s2R"/>
+                <constraint firstItem="lVp-Lh-CT1" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.22" priority="900" id="Bmd-es-7ai"/>
+                <constraint firstItem="5ye-HA-x6O" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.63" id="FyH-na-VY5"/>
+                <constraint firstItem="1o7-Fw-uVB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MQJ-ut-9jL"/>
+                <constraint firstItem="lVp-Lh-CT1" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.8" id="WTL-AM-kTR"/>
+                <constraint firstItem="1o7-Fw-uVB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YRF-7s-CzM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lVp-Lh-CT1" secondAttribute="trailing" constant="15" id="gME-Wo-YFF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1o7-Fw-uVB" secondAttribute="trailing" id="itq-BE-gqk"/>
+                <constraint firstItem="5ye-HA-x6O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="o4l-Tc-c1G"/>
+                <constraint firstItem="lVp-Lh-CT1" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="uaE-Qy-AH3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="148.80000000000001" y="-90.404797601199405"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="sad_yellow" width="993" height="993"/>
+    </resources>
+</document>

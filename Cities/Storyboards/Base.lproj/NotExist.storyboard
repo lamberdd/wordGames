@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Tm-81-NSE">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Not Found View Controller-->
+        <scene sceneID="Ed9-2n-cP2">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="3Tm-81-NSE" customClass="NotFoundViewController" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rpQ-tH-eXR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgw-dy-iqp">
+                                <rect key="frame" x="54" y="111" width="492" height="378"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f42-hO-iNs">
+                                    <rect key="frame" x="0.0" y="0.0" width="492" height="378"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFU-lT-4j0">
+                                            <rect key="frame" x="20" y="62" width="452" height="20"/>
+                                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Указанного слова не существует :( Но если это не так, то можете добавить его." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00t-Ey-gNP">
+                                            <rect key="frame" x="35" y="97" width="422" height="39.5"/>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                            <color key="textColor" red="0.058823529411764705" green="0.058823529411764705" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wSm-i9-0ql">
+                                            <rect key="frame" x="153.5" y="224" width="185" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="185" id="ew6-oN-XQ0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                            <state key="normal" title="Добавить слово">
+                                                <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="addWord:" destination="3Tm-81-NSE" eventType="touchUpInside" id="1q5-7p-KR0"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VP6-Ul-cFx">
+                                            <rect key="frame" x="35" y="266" width="422" height="32"/>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                            <state key="normal" title="Проверить в интернете">
+                                                <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="checkInInternet:" destination="3Tm-81-NSE" eventType="touchUpInside" id="bgR-AN-i6d"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="moq-xK-tKy">
+                                            <rect key="frame" x="449" y="13" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="6am-mw-CtU"/>
+                                                <constraint firstAttribute="height" constant="30" id="Fwd-qr-YkE"/>
+                                                <constraint firstAttribute="width" secondItem="moq-xK-tKy" secondAttribute="height" multiplier="1:1" id="kjl-VM-hwX"/>
+                                            </constraints>
+                                            <state key="normal" image="close"/>
+                                            <connections>
+                                                <action selector="close:" destination="3Tm-81-NSE" eventType="touchUpInside" id="0Oc-Jc-jXf"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwb-hO-t9m">
+                                            <rect key="frame" x="173.5" y="316" width="145" height="32"/>
+                                            <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="32" id="0IL-Ah-ho2"/>
+                                                <constraint firstAttribute="width" constant="145" id="Ki3-AE-RCi"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                            <state key="normal" title="Продолжить">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="continueClick:" destination="3Tm-81-NSE" eventType="touchUpInside" id="Io7-J8-SC3"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Не существует" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6aC-Ok-lNO">
+                                            <rect key="frame" x="20" y="25" width="452" height="22"/>
+                                            <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="19"/>
+                                            <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.90116652397260277" alpha="0.45475706335616439" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="RFU-lT-4j0" firstAttribute="leading" secondItem="f42-hO-iNs" secondAttribute="leading" constant="20" id="6FD-NY-rIs"/>
+                                        <constraint firstItem="Wwb-hO-t9m" firstAttribute="top" secondItem="VP6-Ul-cFx" secondAttribute="bottom" constant="18" id="EsH-ob-2ZS"/>
+                                        <constraint firstItem="moq-xK-tKy" firstAttribute="top" secondItem="f42-hO-iNs" secondAttribute="top" constant="13" id="K2e-mb-sGV"/>
+                                        <constraint firstAttribute="trailing" secondItem="00t-Ey-gNP" secondAttribute="trailing" constant="35" id="KC9-L1-GSR"/>
+                                        <constraint firstAttribute="bottom" secondItem="Wwb-hO-t9m" secondAttribute="bottom" constant="30" id="LDg-3x-TnG"/>
+                                        <constraint firstItem="VP6-Ul-cFx" firstAttribute="leading" secondItem="f42-hO-iNs" secondAttribute="leading" constant="35" id="NPk-fu-cxZ"/>
+                                        <constraint firstItem="00t-Ey-gNP" firstAttribute="top" secondItem="RFU-lT-4j0" secondAttribute="bottom" constant="15" id="ViO-w6-ggX"/>
+                                        <constraint firstItem="00t-Ey-gNP" firstAttribute="leading" secondItem="f42-hO-iNs" secondAttribute="leading" constant="35" id="Ww1-KH-red"/>
+                                        <constraint firstItem="Wwb-hO-t9m" firstAttribute="centerX" secondItem="f42-hO-iNs" secondAttribute="centerX" id="aBi-k2-3cM"/>
+                                        <constraint firstItem="6aC-Ok-lNO" firstAttribute="leading" secondItem="f42-hO-iNs" secondAttribute="leading" constant="20" id="b5b-7V-BKx"/>
+                                        <constraint firstItem="6aC-Ok-lNO" firstAttribute="top" secondItem="f42-hO-iNs" secondAttribute="top" constant="25" id="bOi-cm-luB"/>
+                                        <constraint firstAttribute="trailing" secondItem="RFU-lT-4j0" secondAttribute="trailing" constant="20" id="djQ-aG-big"/>
+                                        <constraint firstItem="RFU-lT-4j0" firstAttribute="top" secondItem="6aC-Ok-lNO" secondAttribute="bottom" constant="15" id="eJp-dM-Weo"/>
+                                        <constraint firstItem="VP6-Ul-cFx" firstAttribute="top" secondItem="wSm-i9-0ql" secondAttribute="bottom" constant="10" id="ffC-31-XsZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="6aC-Ok-lNO" secondAttribute="trailing" constant="20" id="fsZ-K9-OUH"/>
+                                        <constraint firstAttribute="trailing" secondItem="moq-xK-tKy" secondAttribute="trailing" constant="13" id="iqp-FG-dve"/>
+                                        <constraint firstAttribute="trailing" secondItem="VP6-Ul-cFx" secondAttribute="trailing" constant="35" id="miP-zS-qmZ"/>
+                                        <constraint firstItem="wSm-i9-0ql" firstAttribute="centerX" secondItem="f42-hO-iNs" secondAttribute="centerX" id="nZP-yI-Qya"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="26"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <blurEffect style="light"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.29802547089041098" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hgw-dy-iqp" firstAttribute="height" secondItem="Rgn-5Y-Fz9" secondAttribute="height" multiplier="0.63" id="ejr-Ji-gsP"/>
+                            <constraint firstItem="hgw-dy-iqp" firstAttribute="width" secondItem="Rgn-5Y-Fz9" secondAttribute="width" multiplier="0.82" id="js4-Gl-EEy"/>
+                            <constraint firstItem="hgw-dy-iqp" firstAttribute="centerY" secondItem="rpQ-tH-eXR" secondAttribute="centerY" id="l50-Vb-dBx"/>
+                            <constraint firstItem="hgw-dy-iqp" firstAttribute="centerX" secondItem="rpQ-tH-eXR" secondAttribute="centerX" id="mAk-Bl-cbQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Rgn-5Y-Fz9"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionText" destination="00t-Ey-gNP" id="J4G-De-Txg"/>
+                        <outlet property="wordName" destination="RFU-lT-4j0" id="9ZW-Do-4Bv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tRh-ow-CHr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="84" y="98.50074962518741"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="close" width="384" height="384"/>
+    </resources>
+</document>

@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Начать"; ObjectID = "1Bh-YR-hlS"; */
+"1Bh-YR-hlS.normalTitle" = "Начать";
+
+/* Class = "UILabel"; text = "Подсказки:"; ObjectID = "8ff-F2-HwR"; */
+"8ff-F2-HwR.text" = "Подсказки:";
+
+/* Class = "UIBarButtonItem"; title = "Отмена"; ObjectID = "ce0-pF-asL"; */
+"ce0-pF-asL.title" = "Отмена";
+
+/* Class = "UINavigationItem"; title = "Города"; ObjectID = "mpF-cL-gGx"; */
+"mpF-cL-gGx.title" = "Города";
+
+/* Class = "UILabel"; text = "Игроки:"; ObjectID = "wdU-SU-BUV"; */
+"wdU-SU-BUV.text" = "Игроки:";

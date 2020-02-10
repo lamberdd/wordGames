@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Ваш счёт"; ObjectID = "3mg-FO-SQW"; */
+"3mg-FO-SQW.text" = "Ваш счёт";
+
+/* Class = "UILabel"; text = "20"; ObjectID = "9EX-IG-UQI"; */
+"9EX-IG-UQI.text" = "20";
+
+/* Class = "UILabel"; text = "Счёт"; ObjectID = "RtE-Sg-tvc"; */
+"RtE-Sg-tvc.text" = "Счёт";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "UdJ-dU-qHW"; */
+"UdJ-dU-qHW.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "X1g-Zm-3F3"; */
+"X1g-Zm-3F3.normalTitle" = "Продолжить";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "n3o-3w-AH4"; */
+"n3o-3w-AH4.text" = "Detail";

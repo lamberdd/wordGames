@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WordsStackView" customModule="Cities" customModuleProvider="target">
+            <connections>
+                <outlet property="animatingMainLabel" destination="q6G-BD-cJE" id="gZg-m8-u3h"/>
+                <outlet property="currentWord" destination="hdO-tH-Ckc" id="wMC-W4-CB8"/>
+                <outlet property="previousWord" destination="CQj-aF-whc" id="d88-LP-Y9K"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="422" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdO-tH-Ckc">
+                    <rect key="frame" x="3" y="52" width="416" height="26"/>
+                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="21"/>
+                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQj-aF-whc">
+                    <rect key="frame" x="3" y="23.5" width="416" height="20.5"/>
+                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="17"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6G-BD-cJE">
+                    <rect key="frame" x="3" y="93" width="416" height="25.5"/>
+                    <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="21"/>
+                    <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="hdO-tH-Ckc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="3" id="1Ho-Zc-K9j"/>
+                <constraint firstItem="hdO-tH-Ckc" firstAttribute="top" secondItem="CQj-aF-whc" secondAttribute="bottom" constant="8" id="AWw-bd-sA5"/>
+                <constraint firstItem="CQj-aF-whc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="Li2-eX-lYe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CQj-aF-whc" secondAttribute="trailing" constant="3" id="SDW-me-f6c"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hdO-tH-Ckc" secondAttribute="trailing" constant="3" id="TKB-za-e75"/>
+                <constraint firstItem="q6G-BD-cJE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="3" id="dbB-d1-cIS"/>
+                <constraint firstItem="hdO-tH-Ckc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="hjj-xZ-uk5"/>
+                <constraint firstItem="q6G-BD-cJE" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="l75-2v-avp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hdO-tH-Ckc" secondAttribute="bottom" constant="10" id="pvC-IT-tKV"/>
+                <constraint firstAttribute="trailing" secondItem="q6G-BD-cJE" secondAttribute="trailing" constant="3" id="xy6-PX-sdX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="q6G-BD-cJE" secondAttribute="top" constant="-5" id="yT3-qo-nEb"/>
+                <constraint firstItem="CQj-aF-whc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="3" id="zys-94-PsW"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="135" y="-143.66197183098592"/>
+        </view>
+    </objects>
+</document>

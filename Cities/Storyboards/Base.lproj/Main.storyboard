@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="m64-X8-VE8">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Выберите игру-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainScreenViewController" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-Xg-jFl" customClass="MenuButton" customModule="Cities" customModuleProvider="target">
+                                <rect key="frame" x="44" y="50" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.89763680377113708" green="1" blue="0.92876444673356884" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ag7-MS-v4P"/>
+                                    <constraint firstAttribute="width" constant="100" id="gud-a0-akJ"/>
+                                </constraints>
+                                <state key="normal" image="cities"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="j2n-sl-Ae5" kind="presentation" identifier="cities" modalPresentationStyle="fullScreen" id="8EG-UV-zD1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Города" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hef-RW-THE">
+                                <rect key="frame" x="66.5" y="155" width="54.5" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlg-5P-8m3">
+                                <rect key="frame" x="20" y="570" width="335" height="33"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <state key="normal" title="Лучшие игроки">
+                                    <color key="titleColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showBestScores:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Amy-w8-tqR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwG-MM-D9T" customClass="MenuButton" customModule="Cities" customModuleProvider="target">
+                                <rect key="frame" x="231.5" y="50" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.89763680379999999" green="1" blue="0.92876444670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HwG-MM-D9T" secondAttribute="height" multiplier="1:1" id="4kx-nv-jwt"/>
+                                    <constraint firstAttribute="width" constant="100" id="pfm-Hn-1kg"/>
+                                </constraints>
+                                <state key="normal" image="countries"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="HCb-UH-Apg" kind="presentation" identifier="countries" modalPresentationStyle="fullScreen" id="uIG-S8-d7Q"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страны" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X3t-S7-dmb">
+                                <rect key="frame" x="252" y="155" width="58.5" height="21"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hef-RW-THE" firstAttribute="top" secondItem="jm0-Xg-jFl" secondAttribute="bottom" constant="5" id="7gK-rS-eqr"/>
+                            <constraint firstItem="mlg-5P-8m3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cc2-Kj-vh5"/>
+                            <constraint firstItem="X3t-S7-dmb" firstAttribute="centerX" secondItem="HwG-MM-D9T" secondAttribute="centerX" id="P5X-LL-YWf"/>
+                            <constraint firstItem="jm0-Xg-jFl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="PPc-8E-n3y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mlg-5P-8m3" secondAttribute="trailing" constant="20" id="Sdr-nP-HLJ"/>
+                            <constraint firstItem="Hef-RW-THE" firstAttribute="centerX" secondItem="jm0-Xg-jFl" secondAttribute="centerX" id="UGJ-6v-qcl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mlg-5P-8m3" secondAttribute="bottom" constant="20" id="bip-EB-PtR"/>
+                            <constraint firstItem="X3t-S7-dmb" firstAttribute="top" secondItem="HwG-MM-D9T" secondAttribute="bottom" constant="5" id="exs-Px-uhG"/>
+                            <constraint firstItem="HwG-MM-D9T" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="sAm-ic-S7w"/>
+                            <constraint firstItem="HwG-MM-D9T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="tdQ-il-a5A"/>
+                            <constraint firstItem="jm0-Xg-jFl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="50" id="yKt-0r-QPM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Выберите игру" id="j2i-WR-zu7">
+                        <barButtonItem key="leftBarButtonItem" title="Настройки" image="settings" id="RGF-bU-H6a">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="up-arrow" id="t6R-Ik-GNj">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--prepareGame-->
+        <scene sceneID="xw7-Gn-a9u">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Prepare" referencedIdentifier="prepareGame" id="j2n-sl-Ae5" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJE-6h-3IB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652" y="-154"/>
+        </scene>
+        <!--prepareGame-->
+        <scene sceneID="DgG-6d-09g">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Prepare" referencedIdentifier="prepareGame" id="HCb-UH-Apg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xFu-J7-xDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1722" y="19"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="B8H-Mf-bhc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m64-X8-VE8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="aoh-wD-kdi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="18"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="sZc-W3-7Ym"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VbW-d0-miN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cities" width="596" height="596"/>
+        <image name="countries" width="384" height="384"/>
+        <image name="settings" width="32" height="32"/>
+        <image name="up-arrow" width="32" height="32"/>
+    </resources>
+</document>
