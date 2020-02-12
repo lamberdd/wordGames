@@ -88,9 +88,10 @@ class GameCore {
                 return .alreadyUsed
             }
         }
-        for obj in words { // Ищем в основных словах
+        for (index, obj) in words.enumerated() { // Ищем в основных словах
             if search == obj["search"] {
                 updateCurrentWord(object: obj)
+                self.words.remove(at: index) // Удаляем слово, т.к оно больше не нужно для поиска
                 return .success
             }
         }
@@ -126,14 +127,10 @@ class GameCore {
     }
     
     private func isCorrectLetter(_ letter: String) -> Bool {
-        let invalidLetters = ["ы","ь","ъ"]
-        var isValid = true
-        for invalidLetter in invalidLetters {
-            if invalidLetter == letter {
-                isValid = false
-                break
-            }
-        }
-        return isValid
+        
+        var isCorrect = true
+        isCorrect = arrayHelper.existWordWith(firstLetter: letter, in: words)
+        
+        return isCorrect
     }
 }

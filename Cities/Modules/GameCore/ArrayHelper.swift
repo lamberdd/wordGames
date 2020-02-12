@@ -36,4 +36,19 @@ class ArrayHelper {
         let newWords = words.filter({ $0["search"]?.first?.description == firstLetter })
         return newWords
     }
+    
+    func existWordWith(firstLetter: String, in wordArray: [[String: String]]) -> Bool {
+        let word = wordArray.first { (item) -> Bool in
+            guard let searchWord = item["search"] as? String else { return false }
+            guard let searchFirstLetter = searchWord.first else { return false }
+            
+            return String(searchFirstLetter) == firstLetter.lowercased()
+        }
+        
+        if let existWord = word {
+            return true
+        } else {
+            return false
+        }
+    }
 }
