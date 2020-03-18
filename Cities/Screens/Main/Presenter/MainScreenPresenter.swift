@@ -23,7 +23,7 @@ class MainScreenPresenter {
     //MARK: - Public methods
     
     func showBestScores() {
-        let playerScores = service.getBestPlayer()
-        coordinator.showBestScores(players: playerScores)
+        let playerScores = service.getBestPlayerForAllGames()
+        coordinator.showBestScores(bestPlayers: playerScores)
     }
 }

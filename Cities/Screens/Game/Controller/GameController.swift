@@ -66,14 +66,10 @@ class GameController {
             view.animateAlreadyUsed()
         } else if status == .notFound {
             view.shakeErrorTextField()
-            Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { (t) in
-                let notFoundVC = UIStoryboard(name: "NotExist", bundle: nil).instantiateInitialViewController() as! NotFoundViewController
-                notFoundVC.onAddWord = {
-                    self.gameCore.addUserWordAndAnswer(word)
-                    self.successAnswer()
-                }
-                self.view.present(notFoundVC)
-                notFoundVC.setup(word: word, type: self.gameCore.type)
+            coordinator.showNotFoundView(word: word, gameType: gameCore.type, after: 0.2) { [weak self] in
+                // Если нажал "Добавить"
+                self?.gameCore.addUserWordAndAnswer(word)
+                self?.successAnswer()
             }
         } else if status == .invalid {
             view.shakeErrorTextField()
@@ -90,28 +86,41 @@ class GameController {
     }
     
     func exit() {
-        let titleSheet = NSLocalizedString("complete_game", comment: "")
-        let messageScheet = NSLocalizedString("are_you_sure_somplete", comment: "")
-        let destructiveText = NSLocalizedString("finish_game", comment: "")
-        let actionSheet = UIAlertController(title: titleSheet, message: messageScheet, preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: destructiveText, style: .destructive, handler: { [weak actionSheet] (action) in
-            actionSheet?.dismiss(animated: true, completion: nil)
-            guard self.players.totalScore() > 0 else {
-                self.view.closeView()
-                return
+        
+        coordinator.showConfirmExit(onConfirm: { [weak self] in
+            if let players = self?.players, players.totalScore() > 0 {
+                self?.coordinator.showGameScores(players: players.getPlayers()) {
+                    if let core = self?.gameCore {
+                        AppSettings.global.updateScores(for: core.type, players: players.getPlayers())
+                    }
+                    self?.coordinator.closeGame()
+                }
+            } else {
+                self?.coordinator.closeGameToPrepare()
             }
-            let scoresScreen = UIStoryboard(name: "Scores", bundle: nil).instantiateInitialViewController() as! ScoresViewController
-            scoresScreen.playersArray = self.players.getPlayers()
-            scoresScreen.onContinue = {
-                AppSettings.global.updateScores(for: self.players.getPlayers())
-                self.view.closeGame()
-            }
-            self.view.present(scoresScreen)
-        }))
-        actionSheet.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: { [weak actionSheet] (action) in
-            actionSheet?.dismiss(animated: true, completion: nil)
-        }))
-        view.present(actionSheet)
+        })
+//        let titleSheet = NSLocalizedString("complete_game", comment: "")
+//        let messageScheet = NSLocalizedString("are_you_sure_somplete", comment: "")
+//        let destructiveText = NSLocalizedString("finish_game", comment: "")
+//        let actionSheet = UIAlertController(title: titleSheet, message: messageScheet, preferredStyle: .actionSheet)
+//        actionSheet.addAction(UIAlertAction(title: destructiveText, style: .destructive, handler: { [weak actionSheet] (action) in
+//            actionSheet?.dismiss(animated: true, completion: nil)
+//            guard self.players.totalScore() > 0 else {
+//                self.view.closeView()
+//                return
+//            }
+//            let scoresScreen = UIStoryboard(name: "Scores", bundle: nil).instantiateInitialViewController() as! ScoresViewController
+//            scoresScreen.playersArray = self.players.getPlayers()
+//            scoresScreen.onContinue = {
+//                AppSettings.global.updateScores(for: self.gameCore.type, players: self.players.getPlayers())
+//                self.view.closeGame()
+//            }
+//            self.view.present(scoresScreen)
+//        }))
+//        actionSheet.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: { [weak actionSheet] (action) in
+//            actionSheet?.dismiss(animated: true, completion: nil)
+//        }))
+//        view.present(actionSheet)
     }
     
     func help() {

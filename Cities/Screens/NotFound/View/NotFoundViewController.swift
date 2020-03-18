@@ -13,7 +13,7 @@ class NotFoundViewController: UIViewController {
 
     public var onAddWord: (()->Void)? = nil
     
-    private var gameType: GameType = .city
+    private var gameType: GameType = .cities
     
     @IBOutlet weak var wordName: UILabel!
     @IBOutlet weak var descriptionText: UILabel!

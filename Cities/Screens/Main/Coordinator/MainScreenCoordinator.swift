@@ -19,23 +19,20 @@ class MainScreenCoordinator {
         viewController.presenter = MainScreenPresenter(view: viewController, coordinator: self)
     }
     
-    func showBestScores(players: [Player]) {
-        guard let scoresScreen = UIStoryboard(name: "Scores", bundle: nil).instantiateInitialViewController() as? ScoresViewController else { return }
-        scoresScreen.playersArray = players
-        scoresScreen.onContinue = { [weak scoresScreen] in
-            scoresScreen?.dismissAnimation {
-                scoresScreen?.dismiss(animated: true, completion: nil)
-            }
-        }
-        mainVC.present(scoresScreen, animated: true, completion: nil)
+    func showBestScores(bestPlayers: [GameType: [Player]]) {
+        let gamesScoresVC = GameBestScoresVC.get(for: bestPlayers)
+        
+        let bestScores = BestScoresViewController()
+        bestScores.gamesScores = gamesScoresVC
+        mainVC.present(bestScores, animated: true, completion: nil)
     }
     
     func prepare(for segue: UIStoryboardSegue) {
         switch segue.identifier {
         case "cities":
-            setupPrepareScreen(segue.destination, gameType: .city)
+            setupPrepareScreen(segue.destination, gameType: .cities)
         case "countries":
-            setupPrepareScreen(segue.destination, gameType: .country)
+            setupPrepareScreen(segue.destination, gameType: .countries)
         default:
             print("Game undefined. Select cities")
         }

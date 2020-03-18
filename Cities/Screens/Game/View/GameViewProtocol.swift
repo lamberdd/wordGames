@@ -27,5 +27,4 @@ protocol GameViewProtocol: class {
     func setHelpsCount(_ count: Int)
     func setTextField(word: String)
     func setBackgroundImage(_ image: UIImage)
-    func present(_ viewController: UIViewController)
 }

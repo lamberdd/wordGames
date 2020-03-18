@@ -16,13 +16,13 @@ class WordFiles {
     static func getPathForCurrentLang(gameType: GameType) -> String {
         let gameLang = Locale.current.languageCode ?? "en"
         switch gameType {
-        case .city:
+        case .cities:
             if gameLang == "ru" {
                 return filePaths["citiesRu"]!
             } else {
                 return filePaths["citiesEn"]!
             }
-        case .country:
+        case .countries:
             if gameLang == "ru" {
                 return filePaths["countriesRu"]!
             } else {

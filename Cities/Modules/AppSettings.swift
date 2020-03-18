@@ -29,9 +29,13 @@ class AppSettings {
     private let scoreStorageName = "top5scores"
     private let maxScores = 5
     
-    func updateScores(for players: [Player]) {
+    private func scoreStoreName(_ game: GameType) -> String {
+        return "\(game)_\(scoreStorageName)"
+    }
+    
+    func updateScores(for game: GameType, players: [Player]) {
         var sortedPlayers = players.sorted { $0.score > $1.score }
-        var storedScores: [String: Int] = (defaults.dictionary(forKey: scoreStorageName) as? [String: Int]) ?? [:]
+        var storedScores: [String: Int] = (defaults.dictionary(forKey: scoreStoreName(game)) as? [String: Int]) ?? [:]
         
         if storedScores.count < maxScores {
             var addedPlayers: Int = 0
@@ -61,11 +65,11 @@ class AppSettings {
             }
         }
         
-        defaults.set(storedScores, forKey: scoreStorageName)
+        defaults.set(storedScores, forKey: scoreStoreName(game))
     }
     
-    func getBestScores() -> [Player] {
-        let scores = (defaults.dictionary(forKey: scoreStorageName) as? [String: Int]) ?? [:]
+    func getBestScores(for game: GameType) -> [Player] {
+        let scores = (defaults.dictionary(forKey: scoreStoreName(game)) as? [String: Int]) ?? [:]
         var players: [Player] = []
         for (name, score) in scores {
             players.append(Player(name: name, score: score, helps: 0))

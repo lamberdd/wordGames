@@ -13,12 +13,12 @@
 "player" = "Player";
 
 //MARK: Game titles
-"city" = "Cities";
-"country" = "Countries";
+"cities" = "Cities";
+"countries" = "Countries";
 
 //MARK: Game screen
 "you_on" = "You on";
-"complete_game" = "Complete the current game?";
-"are_you_sure_somplete" = "Are you sure you want to complete the current game?";
-"finish_game" = "Finish the game";
+"complete_game" = "Finish the current game?";
+"are_you_sure_complete" = "Are you sure you want to finish the current game?";
+"finish_game" = "Finish";
 "computer" = "Computer";

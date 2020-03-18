@@ -19,7 +19,7 @@ class UserWords {
     init(gameType: GameType) {
         var filePath = ""
         switch gameType {
-        case .city:
+        case .cities:
             filePath = pathToCities
         default:
             filePath = pathToCities

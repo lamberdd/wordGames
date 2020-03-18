@@ -10,7 +10,7 @@ import UIKit
 
 class PrepareScreenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var gameType = GameType.city
+    var gameType = GameType.cities
     
     @IBAction func exit(_ sender: UIBarButtonItem) {
         navigationController?.popViewController(animated: true)

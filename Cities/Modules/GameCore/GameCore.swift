@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum GameType: String {
-    case city, country
+enum GameType: String, CaseIterable {
+    case cities, countries
 }
 
 enum AnswerType {
@@ -79,6 +79,7 @@ class GameCore {
     }
     
     func answer(_ word: String) -> AnswerType {
+        let startTime = Date().timeIntervalSince1970
         let search = createSearchWord(from: word)
         if search.first != lastLetter().lowercased().last {
             return .invalid
@@ -88,10 +89,12 @@ class GameCore {
                 return .alreadyUsed
             }
         }
-        for (index, obj) in words.enumerated() { // Ищем в основных словах
+        for index in 0...words.count-1 {
+            let obj = words[index]
             if search == obj["search"] {
                 updateCurrentWord(object: obj)
                 self.words.remove(at: index) // Удаляем слово, т.к оно больше не нужно для поиска
+                print(Date().timeIntervalSince1970-startTime)
                 return .success
             }
         }

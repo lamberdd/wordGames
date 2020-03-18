@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class GameImage {
-    private static let images: [GameType: String] = [.city: "cities", .country: "countries"]
+    private static let images: [GameType: String] = [.cities: "cities", .countries: "countries"]
     private static let defaultImage = UIImage()
     
     static func getFor(gameType: GameType) -> UIImage {

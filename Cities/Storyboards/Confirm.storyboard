@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8vZ-Yh-wZG">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Confirm View Controller-->
+        <scene sceneID="gfL-iZ-U09">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="8vZ-Yh-wZG" customClass="ConfirmViewController" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="etI-of-SNJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tSA-7v-czV">
+                                <rect key="frame" x="37.5" y="186" width="300" height="295"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKa-BP-zza">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="54"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ba-Iu-DNH">
+                                                <rect key="frame" x="108.5" y="16.5" width="83" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="9Ba-Iu-DNH" firstAttribute="centerX" secondItem="GKa-BP-zza" secondAttribute="centerX" id="8n1-4R-fp7"/>
+                                            <constraint firstAttribute="height" constant="54" id="9md-Tz-MdR"/>
+                                            <constraint firstItem="9Ba-Iu-DNH" firstAttribute="centerY" secondItem="GKa-BP-zza" secondAttribute="centerY" id="dmL-Rh-1vW"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pzv-pk-3mo">
+                                        <rect key="frame" x="30" y="137" width="240" height="21"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="miD-EV-HsD">
+                                        <rect key="frame" x="0.0" y="243" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7HK-xR-yOt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="18"/>
+                                        <state key="normal" title="Отмена">
+                                            <color key="titleColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onCancelClick:" destination="8vZ-Yh-wZG" eventType="touchUpInside" id="EP8-aE-ghi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSi-Hc-ehP">
+                                        <rect key="frame" x="150" y="243" width="150" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="BRH-LG-XWA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                        <state key="normal" title="Подтвердить">
+                                            <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onConfirmClick:" destination="8vZ-Yh-wZG" eventType="touchUpInside" id="0Gx-Nh-qOh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="pzv-pk-3mo" firstAttribute="centerX" secondItem="tSA-7v-czV" secondAttribute="centerX" id="0kh-ii-Wrm"/>
+                                    <constraint firstItem="miD-EV-HsD" firstAttribute="width" secondItem="tSA-7v-czV" secondAttribute="width" multiplier="0.5" id="2eD-vk-hbs"/>
+                                    <constraint firstItem="pzv-pk-3mo" firstAttribute="width" secondItem="tSA-7v-czV" secondAttribute="width" multiplier="0.8" id="4cx-GS-Zco"/>
+                                    <constraint firstAttribute="bottom" secondItem="miD-EV-HsD" secondAttribute="bottom" constant="12" id="Bru-LB-3wu"/>
+                                    <constraint firstItem="pzv-pk-3mo" firstAttribute="centerY" secondItem="tSA-7v-czV" secondAttribute="centerY" id="DdG-P7-0ME"/>
+                                    <constraint firstItem="GKa-BP-zza" firstAttribute="top" secondItem="tSA-7v-czV" secondAttribute="top" id="H9n-Do-JwU"/>
+                                    <constraint firstItem="miD-EV-HsD" firstAttribute="leading" secondItem="tSA-7v-czV" secondAttribute="leading" id="HDb-7u-OJ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="KSi-Hc-ehP" secondAttribute="trailing" id="HSN-nO-fal"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="340" id="cFH-rE-hlW"/>
+                                    <constraint firstAttribute="bottom" secondItem="KSi-Hc-ehP" secondAttribute="bottom" constant="12" id="i4s-Dr-8Qy"/>
+                                    <constraint firstAttribute="height" constant="295" id="ni2-75-EK9"/>
+                                    <constraint firstItem="KSi-Hc-ehP" firstAttribute="width" secondItem="tSA-7v-czV" secondAttribute="width" multiplier="0.5" id="oTW-jv-eAn"/>
+                                    <constraint firstAttribute="trailing" secondItem="GKa-BP-zza" secondAttribute="trailing" id="rJu-6F-1Gx"/>
+                                    <constraint firstItem="GKa-BP-zza" firstAttribute="leading" secondItem="tSA-7v-czV" secondAttribute="leading" id="vQV-gX-kXZ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tSA-7v-czV" firstAttribute="centerY" secondItem="etI-of-SNJ" secondAttribute="centerY" id="1gJ-Lb-29u"/>
+                            <constraint firstItem="tSA-7v-czV" firstAttribute="width" secondItem="etI-of-SNJ" secondAttribute="width" multiplier="0.8" priority="950" id="4s5-Gu-Fya"/>
+                            <constraint firstItem="tSA-7v-czV" firstAttribute="centerX" secondItem="etI-of-SNJ" secondAttribute="centerX" id="iOU-aX-rnD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZAb-Pg-ZGQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="miD-EV-HsD" id="wXo-pH-2I3"/>
+                        <outlet property="confirmButton" destination="KSi-Hc-ehP" id="2qV-RX-7DG"/>
+                        <outlet property="descriptionLabel" destination="pzv-pk-3mo" id="gGr-M2-DuO"/>
+                        <outlet property="titleLabel" destination="9Ba-Iu-DNH" id="xK7-kd-25W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="muD-D3-OpC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="98"/>
+        </scene>
+    </scenes>
+</document>

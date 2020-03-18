@@ -13,12 +13,12 @@
 "player" = "Игрок";
 
 //MARK: Game titles
-"city" = "Города";
-"country" = "Страны";
+"cities" = "Города";
+"countries" = "Страны";
 
 //MARK: Game screen
 "you_on" = "Вам на";
 "complete_game" = "Завершить текущую игру?";
-"are_you_sure_somplete" = "Вы уверены, что хотите завершить текущую игру?";
-"finish_game" = "Закончить игру";
+"are_you_sure_complete" = "Вы уверены, что хотите завершить текущую игру?";
+"finish_game" = "Завершить";
 "computer" = "Компьютер";

@@ -69,6 +69,7 @@ class GameView: UIViewController, GameViewProtocol {
         navigationItem.rightBarButtonItem?.setTextFontToDefault()
         
         viewDidLoaded?()
+        viewDidLoaded = nil
         backgroundImageLeading.constant = -35
         backgoundImageTrailing.constant = 35
     }
@@ -171,10 +172,5 @@ class GameView: UIViewController, GameViewProtocol {
         backgroundImage.image = image
     }
     
-    // MARK: - Routing
-    
-    func present(_ viewController: UIViewController) {
-        present(viewController, animated: true, completion: nil)
-    }
 
 }
