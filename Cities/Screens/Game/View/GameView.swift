@@ -31,12 +31,16 @@ class GameView: UIViewController, GameViewProtocol {
     @IBAction func showUsedWords(_ sender: UIButton) {
         controller.showUsedWords()
     }
+    @IBAction func onChangeLetter(_ sender: UIButton) {
+        controller.changeLetter()
+    }
     
     @IBOutlet weak var wordsStack: WordsStackView!
     
     @IBOutlet weak var titleGame: UILabel!
     @IBOutlet weak var textInfo: UILabel!
     @IBOutlet weak var textField: FlatTextField!
+    @IBOutlet weak var changeLetterButton: UIButton!
     @IBOutlet weak var playerNameLabel: UILabel!
     @IBOutlet weak var score: UILabel!
     @IBOutlet weak var helpButton: UIBarButtonItem!
@@ -69,7 +73,7 @@ class GameView: UIViewController, GameViewProtocol {
         navigationItem.rightBarButtonItem?.setTextFontToDefault()
         
         viewDidLoaded?()
-        viewDidLoaded = nil
+        changeLetterButtonVisible = false
         backgroundImageLeading.constant = -35
         backgoundImageTrailing.constant = 35
     }
@@ -84,15 +88,6 @@ class GameView: UIViewController, GameViewProtocol {
         self.score.text = String(score)
     }
     
-    func closeView() {
-        clearForClose()
-        presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-    
-    func closeGame() {
-        clearForClose()
-        presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
-    }
     
     private func clearForClose() {
         controller = nil
@@ -110,6 +105,15 @@ class GameView: UIViewController, GameViewProtocol {
         lastLetter = letter.uppercased()
         textInfo.text = "\(NSLocalizedString("you_on", comment: "")) '\(lastLetter)'"
         textField.text = lastLetter
+    }
+    
+    func setChangeLetterTitle(_ title: String) {
+        changeLetterButton.setTitle(title, for: .normal)
+    }
+    
+    var changeLetterButtonVisible: Bool {
+        get { changeLetterButton.alpha > 0.0 }
+        set { changeLetterButton.alpha = newValue ? 1.0 : 0.0 }
     }
     
     func showLoaderIndicator() {

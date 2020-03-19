@@ -21,10 +21,10 @@ protocol GameViewProtocol: class {
     func hideHelps()
     func showHelps()
     func hideSkip()
-    func closeView()
-    func closeGame()
     func hideHelpsBlock()
     func setHelpsCount(_ count: Int)
     func setTextField(word: String)
     func setBackgroundImage(_ image: UIImage)
+    func setChangeLetterTitle(_ title: String)
+    var changeLetterButtonVisible: Bool { get set }
 }

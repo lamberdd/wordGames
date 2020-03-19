@@ -118,6 +118,21 @@ class GameCore {
         return currentWord["name"]!
     }
     
+    private let allowChanging = ["й":"и", "ё":"е"]
+    
+    func getChagedLastLetter() -> (from: String, to: String)? {
+        let allowChange = getAllowChangeLetter()
+        if let key = allowChange?.key, let value = allowChange?.value {
+            return (key.uppercased(), value.uppercased())
+        }
+        return nil
+    }
+    
+    private func getAllowChangeLetter() -> (key: String, value: String?)? {
+        let letter = lastLetter()
+        return allowChanging.first(where: { $0.key == letter })
+    }
+    
     private func updateCurrentWord(object: [String: String]) {
         used.append(object)
         currentWord = object

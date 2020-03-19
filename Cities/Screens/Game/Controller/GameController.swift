@@ -99,28 +99,6 @@ class GameController {
                 self?.coordinator.closeGameToPrepare()
             }
         })
-//        let titleSheet = NSLocalizedString("complete_game", comment: "")
-//        let messageScheet = NSLocalizedString("are_you_sure_somplete", comment: "")
-//        let destructiveText = NSLocalizedString("finish_game", comment: "")
-//        let actionSheet = UIAlertController(title: titleSheet, message: messageScheet, preferredStyle: .actionSheet)
-//        actionSheet.addAction(UIAlertAction(title: destructiveText, style: .destructive, handler: { [weak actionSheet] (action) in
-//            actionSheet?.dismiss(animated: true, completion: nil)
-//            guard self.players.totalScore() > 0 else {
-//                self.view.closeView()
-//                return
-//            }
-//            let scoresScreen = UIStoryboard(name: "Scores", bundle: nil).instantiateInitialViewController() as! ScoresViewController
-//            scoresScreen.playersArray = self.players.getPlayers()
-//            scoresScreen.onContinue = {
-//                AppSettings.global.updateScores(for: self.gameCore.type, players: self.players.getPlayers())
-//                self.view.closeGame()
-//            }
-//            self.view.present(scoresScreen)
-//        }))
-//        actionSheet.addAction(UIAlertAction(title: NSLocalizedString("cancel", comment: ""), style: .cancel, handler: { [weak actionSheet] (action) in
-//            actionSheet?.dismiss(animated: true, completion: nil)
-//        }))
-//        view.present(actionSheet)
     }
     
     func help() {
@@ -167,6 +145,11 @@ class GameController {
         
         view.setCurrentPlayer(name: players.current, score: players.scoreForCurrent())
         view.setLastLetter(lastLetter)
+        if let changeLetter = gameCore.getChagedLastLetter() {
+            saveChangedLastLetter(letterInfo: changeLetter)
+            setupLastLetter()
+            view.changeLetterButtonVisible = true
+        } else { view.changeLetterButtonVisible = false }
         if updateWord {
             view.setWord(curentWord)
         }
@@ -174,6 +157,14 @@ class GameController {
             view.animateSuccess()
         }
         updateHelpButton()
+    }
+    
+    func changeLetter() {
+        guard let from = fromLetter, let to = toLetter else { return }
+        view.setLastLetter(to)
+        fromLetter = to
+        toLetter = from
+        setupLastLetter()
     }
     
     private func updateHelpButton() {
@@ -184,5 +175,20 @@ class GameController {
             view.showHelps()
         }
         view.setHelpsCount(helpsCount)
+    }
+    
+    
+    private var fromLetter: String? = nil
+    private var toLetter: String? = nil
+    private func saveChangedLastLetter(letterInfo: (from: String, to: String)?) {
+        guard let letterInfo = letterInfo else { fromLetter = nil; toLetter = nil; return }
+        fromLetter = letterInfo.from
+        toLetter = letterInfo.to
+    }
+    
+    private func setupLastLetter() {
+        guard let from = fromLetter, let to = toLetter else { return }
+        let newTitle = "\(from)→\(to)"
+        view.setChangeLetterTitle(newTitle)
     }
 }

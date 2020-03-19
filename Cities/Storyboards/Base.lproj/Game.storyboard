@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -160,6 +160,22 @@
                                     <action selector="showUsedWords:" destination="Kr7-72-GfU" eventType="touchUpInside" id="cWv-Kh-iDv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCq-dq-4jw">
+                                <rect key="frame" x="310" y="171.5" width="50" height="35"/>
+                                <color key="backgroundColor" red="0.78421813222540004" green="0.89916612694300513" blue="0.5044088849504863" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="1Xh-Ju-OZK"/>
+                                </constraints>
+                                <state key="normal" title="Й→И "/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onChangeLetter:" destination="Kr7-72-GfU" eventType="touchUpInside" id="XIi-gr-bOT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -169,6 +185,7 @@
                             <constraint firstItem="42q-E1-QyA" firstAttribute="trailing" secondItem="eNY-Wa-yyB" secondAttribute="trailing" constant="15" id="4L4-nJ-nCU"/>
                             <constraint firstItem="Eto-44-xQC" firstAttribute="top" secondItem="42q-E1-QyA" secondAttribute="top" constant="15" id="5bN-nh-aSs"/>
                             <constraint firstItem="hda-aL-uMM" firstAttribute="top" secondItem="42q-E1-QyA" secondAttribute="top" constant="15" id="CtO-jN-xEv"/>
+                            <constraint firstItem="ugn-2z-2kh" firstAttribute="bottom" secondItem="DCq-dq-4jw" secondAttribute="bottom" id="DcF-Vj-c0e"/>
                             <constraint firstItem="42q-E1-QyA" firstAttribute="trailing" secondItem="weo-mL-7fn" secondAttribute="trailing" id="Dee-MN-85e"/>
                             <constraint firstItem="gSL-jy-IkE" firstAttribute="leading" secondItem="5Lk-oE-JZF" secondAttribute="trailing" constant="15" id="Dlf-oi-qN5"/>
                             <constraint firstItem="caL-Mv-jOM" firstAttribute="top" secondItem="0Gc-eq-7xL" secondAttribute="bottom" constant="25" id="Fbf-Te-rPb"/>
@@ -189,6 +206,7 @@
                             <constraint firstItem="gSL-jy-IkE" firstAttribute="top" secondItem="ugn-2z-2kh" secondAttribute="bottom" constant="20" id="eVm-pw-dDD"/>
                             <constraint firstItem="gSL-jy-IkE" firstAttribute="width" secondItem="Aat-36-gdS" secondAttribute="width" multiplier="0.7" constant="-30" id="g3b-5k-Hn4"/>
                             <constraint firstItem="42q-E1-QyA" firstAttribute="trailing" secondItem="hda-aL-uMM" secondAttribute="trailing" constant="15" id="gM3-BN-sbR"/>
+                            <constraint firstItem="ugn-2z-2kh" firstAttribute="trailing" secondItem="DCq-dq-4jw" secondAttribute="trailing" id="gRc-5m-qnv"/>
                             <constraint firstItem="42q-E1-QyA" firstAttribute="trailing" secondItem="6ec-9H-AWo" secondAttribute="trailing" constant="25" id="hQa-uq-zpV"/>
                             <constraint firstItem="6ec-9H-AWo" firstAttribute="leading" secondItem="42q-E1-QyA" secondAttribute="leading" constant="25" id="kAX-bY-FeM"/>
                             <constraint firstItem="D5g-eE-UUl" firstAttribute="centerX" secondItem="Aat-36-gdS" secondAttribute="centerX" id="lx5-d7-pam"/>
@@ -201,6 +219,7 @@
                             <constraint firstItem="3ck-x9-mg9" firstAttribute="top" secondItem="42q-E1-QyA" secondAttribute="top" constant="30" id="uem-S2-Z8D"/>
                             <constraint firstItem="ugn-2z-2kh" firstAttribute="top" secondItem="eNY-Wa-yyB" secondAttribute="bottom" constant="15" id="vPh-6i-OxX"/>
                             <constraint firstItem="0Gc-eq-7xL" firstAttribute="top" secondItem="Eto-44-xQC" secondAttribute="bottom" constant="5" id="vq6-GJ-VDf"/>
+                            <constraint firstItem="DCq-dq-4jw" firstAttribute="top" secondItem="ugn-2z-2kh" secondAttribute="top" id="xz8-sN-Ktm"/>
                             <constraint firstItem="ge6-Rc-OlN" firstAttribute="trailing" secondItem="42q-E1-QyA" secondAttribute="trailing" id="zaU-ci-MBp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="42q-E1-QyA"/>
@@ -223,6 +242,7 @@
                         <outlet property="backgoundImageTrailing" destination="Dee-MN-85e" id="mFS-Do-tkW"/>
                         <outlet property="backgroundImage" destination="weo-mL-7fn" id="cep-pE-2w2"/>
                         <outlet property="backgroundImageLeading" destination="1R2-Ym-XEQ" id="DBd-mw-2UP"/>
+                        <outlet property="changeLetterButton" destination="DCq-dq-4jw" id="wKD-O2-7iY"/>
                         <outlet property="checkmarkView" destination="D5g-eE-UUl" id="01J-mp-3F2"/>
                         <outlet property="helpButton" destination="7R4-4P-xhl" id="vNH-lM-AOh"/>
                         <outlet property="helpCount" destination="leE-hL-JJj" id="Nqd-ij-mfu"/>
