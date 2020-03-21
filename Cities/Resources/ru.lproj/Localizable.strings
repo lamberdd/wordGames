@@ -8,6 +8,7 @@
 
 //MARK: General
 "cancel" = "Отмена";
+"continue" = "Продолжить";
 
 //MARK: Prepare screen
 "player" = "Игрок";
@@ -22,3 +23,6 @@
 "are_you_sure_complete" = "Вы уверены, что хотите завершить текущую игру?";
 "finish_game" = "Завершить";
 "computer" = "Компьютер";
+"cities_not_exist" = "Указанный вами город не существует :(";
+"countries_not_exist" = "Указанная вами страна не существует :(";
+"you_may_add_it" = "Но если это не так, то вы можете добавить";

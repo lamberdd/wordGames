@@ -8,6 +8,7 @@
 
 //MARK: General
 "cancel" = "Cancel";
+"continue" = "Continue";
 
 //MARK: Prepare screen
 "player" = "Player";
@@ -22,3 +23,7 @@
 "are_you_sure_complete" = "Are you sure you want to finish the current game?";
 "finish_game" = "Finish";
 "computer" = "Computer";
+"cities_not_exist" = "The city you specified does not exist :(";
+"countries_not_exist" = "The country you specified does not exist :(";
+"you_may_add_it" = "But if it's not, then you can add it";
+

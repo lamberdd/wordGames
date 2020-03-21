@@ -47,9 +47,16 @@ class NotFoundViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    private func updateDescription() {
+        let notExistPhrase = translate("\(gameType)_not_exist")
+        let addWordPhrase = translate("you_may_add_it")
+        descriptionText.text = "\(notExistPhrase) \(addWordPhrase)"
+    }
+    
     func setup(word: String, type: GameType) {
         gameType = type
         wordName.text = word
+        updateDescription()
     }
 
 }

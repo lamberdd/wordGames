@@ -4,3 +4,12 @@
 
 /* Class = "UINavigationItem"; title = "Выберите игру"; ObjectID = "j2i-WR-zu7"; */
 "j2i-WR-zu7.title" = "Choose game";
+
+/* Class = "UIBarButtonItem"; title = "Настройки"; ObjectID = "RGF-bU-H6a"; */
+"RGF-bU-H6a.title" = "Settings";
+
+/* Class = "UILabel"; text = "Страны"; ObjectID = "X3t-S7-dmb"; */
+"X3t-S7-dmb.text" = "Countries";
+
+/* Class = "UIButton"; normalTitle = "Лучшие игроки"; ObjectID = "mlg-5P-8m3"; */
+"mlg-5P-8m3.normalTitle" = "Best scores";
