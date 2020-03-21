@@ -13,6 +13,10 @@ class Players {
     private var players: [Player] = []
     private var currentNumber = 0
     
+    var isMultiplayer: Bool {
+        get { players.count > 1 }
+    }
+    
     var count: Int {
         get {
             return players.count

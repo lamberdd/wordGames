@@ -114,7 +114,7 @@ class GameController {
         let currentSuccessWord = gameCore.current()
         addUsedWord(for: players.current)
         // Multiplayer
-        let isMultiplayer = players.count > 1
+        let isMultiplayer = players.isMultiplayer
         if isMultiplayer {
            players.nextPlayer()
         } else { // Single player
@@ -122,6 +122,7 @@ class GameController {
            let _ = gameCore.generateWith(firstLetter: lastLetter)
             addUsedWord(for: computerName)
         }
+        
         if isMultiplayer {
             updateView(animateSuccess: true, updateWord: true)
         } else {
@@ -143,11 +144,11 @@ class GameController {
         let curentWord = gameCore.current()
         let lastLetter = gameCore.lastLetter()
         
-        view.setCurrentPlayer(name: players.current, score: players.scoreForCurrent())
+        if players.isMultiplayer { view.setCurrentPlayer(name: players.current, score: players.scoreForCurrent()) }
         view.setLastLetter(lastLetter)
         if let changeLetter = gameCore.getChagedLastLetter() {
-            saveChangedLastLetter(letterInfo: changeLetter)
-            setupLastLetter()
+            saveReplaceableLastLetter(letterInfo: changeLetter)
+            setupReplaceableLastLetter()
             view.changeLetterButtonVisible = true
         } else { view.changeLetterButtonVisible = false }
         if updateWord {
@@ -162,9 +163,14 @@ class GameController {
     func changeLetter() {
         guard let from = fromLetter, let to = toLetter else { return }
         view.setLastLetter(to)
+        if initialLastLetter == from {
+            gameCore.setReplaceableLastLetter()
+        } else if initialLastLetter == to {
+            gameCore.resetLastLetter()
+        }
         fromLetter = to
         toLetter = from
-        setupLastLetter()
+        setupReplaceableLastLetter()
     }
     
     private func updateHelpButton() {
@@ -177,16 +183,17 @@ class GameController {
         view.setHelpsCount(helpsCount)
     }
     
-    
+    private var initialLastLetter: String? = nil
     private var fromLetter: String? = nil
     private var toLetter: String? = nil
-    private func saveChangedLastLetter(letterInfo: (from: String, to: String)?) {
+    private func saveReplaceableLastLetter(letterInfo: (from: String, to: String)?) {
         guard let letterInfo = letterInfo else { fromLetter = nil; toLetter = nil; return }
-        fromLetter = letterInfo.from
+        fromLetter = letterInfo.from;
+        initialLastLetter = fromLetter
         toLetter = letterInfo.to
     }
     
-    private func setupLastLetter() {
+    private func setupReplaceableLastLetter() {
         guard let from = fromLetter, let to = toLetter else { return }
         let newTitle = "\(from)→\(to)"
         view.setChangeLetterTitle(newTitle)

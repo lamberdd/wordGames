@@ -79,10 +79,12 @@ class GameCore {
     }
     
     func answer(_ word: String) -> AnswerType {
-        let startTime = Date().timeIntervalSince1970
         let search = createSearchWord(from: word)
-        if search.first != lastLetter().lowercased().last {
-            return .invalid
+        let last = lastLetter().lowercased().last
+        if search.first != last && last != nil {
+            if replaceableLetter[String(last!)] == nil {
+                return .invalid
+            }
         }
         for userWord in used {
             if userWord["search"] == search {
@@ -94,7 +96,6 @@ class GameCore {
             if search == obj["search"] {
                 updateCurrentWord(object: obj)
                 self.words.remove(at: index) // Удаляем слово, т.к оно больше не нужно для поиска
-                print(Date().timeIntervalSince1970-startTime)
                 return .success
             }
         }
@@ -118,7 +119,7 @@ class GameCore {
         return currentWord["name"]!
     }
     
-    private let allowChanging = ["й":"и", "ё":"е"]
+    private let replaceableLetter = ["й":"и", "ё":"е"]
     
     func getChagedLastLetter() -> (from: String, to: String)? {
         let allowChange = getAllowChangeLetter()
@@ -128,9 +129,18 @@ class GameCore {
         return nil
     }
     
+    private var startedLastLetter: String? = nil
+    func setReplaceableLastLetter() {
+        startedLastLetter = lastLetter()
+        currentWord["lastLetter"] = replaceableLetter[startedLastLetter!]
+    }
+    func resetLastLetter() {
+        currentWord["lastLetter"] = startedLastLetter
+    }
+    
     private func getAllowChangeLetter() -> (key: String, value: String?)? {
         let letter = lastLetter()
-        return allowChanging.first(where: { $0.key == letter })
+        return replaceableLetter.first(where: { $0.key == letter })
     }
     
     private func updateCurrentWord(object: [String: String]) {

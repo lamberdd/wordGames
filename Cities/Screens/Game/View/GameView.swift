@@ -84,16 +84,8 @@ class GameView: UIViewController, GameViewProtocol {
     
     //MARK: View protocol
     func setCurrentPlayer(name: String, score: Int) {
-        playerNameLabel.text = name
+        playerNameLabel.setAnimated(text: name)
         self.score.text = String(score)
-    }
-    
-    
-    private func clearForClose() {
-        controller = nil
-        viewDidLoaded = nil
-        navigationController?.popViewController(animated: true)
-        view.endEditing(true)
     }
     
     func setWord(_ word: String) {

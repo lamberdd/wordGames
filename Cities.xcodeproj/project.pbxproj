@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A16D3AF242605E600D84E9A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16D3AE242605E600D84E9A /* UILabel.swift */; };
 		9A3C8FFD2421506900A0320B /* Confirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3C8FFC2421506900A0320B /* Confirm.storyboard */; };
 		9A3C8FFF242154CF00A0320B /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */; };
 		9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C90002421617C00A0320B /* BlackoutViewController.swift */; };
@@ -84,6 +85,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A16D3AE242605E600D84E9A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		9A3C8FFC2421506900A0320B /* Confirm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Confirm.storyboard; sourceTree = "<group>"; };
 		9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmViewController.swift; path = Confirm/ConfirmViewController.swift; sourceTree = "<group>"; };
 		9A3C90002421617C00A0320B /* BlackoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewController.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 			children = (
 				FB6DEA4122C297480014DA9F /* String.swift */,
 				FB8D064C2395A05600D182C5 /* UIBarButtonItem.swift */,
+				9A16D3AE242605E600D84E9A /* UILabel.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				9A3C8FFF242154CF00A0320B /* ConfirmViewController.swift in Sources */,
 				FBF8862823E0BF6300931867 /* MainScreenPresenter.swift in Sources */,
 				FBDC07AF23C79A0E00B12E1D /* WordsStackView.swift in Sources */,
+				9A16D3AF242605E600D84E9A /* UILabel.swift in Sources */,
 				FBB30F5523EDD2EE0070599F /* GameImage.swift in Sources */,
 				FB3121EF22BFAE35002C8342 /* Constants.swift in Sources */,
 				FB3121EC22BFADE7002C8342 /* MenuButton.swift in Sources */,
