@@ -9,7 +9,7 @@
 import Foundation
 
 enum GameType: String, CaseIterable {
-    case cities, countries
+    case cities, countries, names
 }
 
 enum AnswerType {

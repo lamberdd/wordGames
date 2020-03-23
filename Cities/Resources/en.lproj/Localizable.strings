@@ -16,6 +16,7 @@
 //MARK: Game titles
 "cities" = "Cities";
 "countries" = "Countries";
+"names" = "Firstnames";
 
 //MARK: Game screen
 "you_on" = "You on";
@@ -25,5 +26,6 @@
 "computer" = "Computer";
 "cities_not_exist" = "The city you specified does not exist :(";
 "countries_not_exist" = "The country you specified does not exist :(";
+"names_not_exist" = "The firstname you specified does not exist :(";
 "you_may_add_it" = "But if it's not, then you can add it";
 

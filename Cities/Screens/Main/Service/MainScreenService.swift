@@ -14,12 +14,12 @@ enum compass: CaseIterable {
 
 class MainScreenService {
     
-    func getBestPlayerForAllGames() -> [GameType: [Player]] {
+    func getBestPlayerForAllGames() -> [GameBestScoresModel] {
         let appSettings = AppSettings.global
-        var result: [GameType: [Player]] = [:]
+        var result: [GameBestScoresModel] = []
         for game in GameType.allCases {
             let bestPlayer = appSettings.getBestScores(for: game)
-            result[game] = bestPlayer
+            result.append(GameBestScoresModel(gameType: game, players: bestPlayer))
         }
         
         return result

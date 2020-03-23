@@ -11,7 +11,8 @@ import Foundation
 class WordFiles {
     
     private static let filePaths = ["citiesEn": "cities_en.json", "citiesRu": "cities.json",
-                                    "countriesEn": "country_en.json", "countriesRu": "country_ru.json"]
+                                    "countriesEn": "country_en.json", "countriesRu": "country_ru.json",
+                                    "namesEn": "names_en.json", "namesRu": "names_ru.json"]
     
     static func getPathForCurrentLang(gameType: GameType) -> String {
         let gameLang = Locale.current.languageCode ?? "en"
@@ -27,6 +28,12 @@ class WordFiles {
                 return filePaths["countriesRu"]!
             } else {
                 return filePaths["countriesEn"]!
+            }
+        case .names:
+            if gameLang == "ru" {
+                return filePaths["namesRu"]!
+            } else {
+                return filePaths["namesEn"]!
             }
         default:
             return ""

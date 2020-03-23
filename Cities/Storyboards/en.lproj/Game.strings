@@ -37,3 +37,6 @@
 
 /* Class = "UITextField"; placeholder = "Название города"; ObjectID = "ugn-2z-2kh"; */
 "ugn-2z-2kh.placeholder" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Вышедшие слова"; ObjectID = "zt0-7J-m9q"; */
+"zt0-7J-m9q.normalTitle" = "Named words";

@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		9A16D3AF242605E600D84E9A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16D3AE242605E600D84E9A /* UILabel.swift */; };
-		9A3C8FFD2421506900A0320B /* Confirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3C8FFC2421506900A0320B /* Confirm.storyboard */; };
+		9A16D3B52426394400D84E9A /* names_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3B32426394400D84E9A /* names_en.json */; };
+		9A16D3B62426394400D84E9A /* names_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3B42426394400D84E9A /* names_ru.json */; };
+		9A16D3BB2426506700D84E9A /* Confirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3BD2426506700D84E9A /* Confirm.storyboard */; };
 		9A3C8FFF242154CF00A0320B /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */; };
 		9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C90002421617C00A0320B /* BlackoutViewController.swift */; };
 		FB02C00D2316FFB000FAD411 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB02C00C2316FFB000FAD411 /* NotificationView.swift */; };
@@ -86,8 +88,13 @@
 
 /* Begin PBXFileReference section */
 		9A16D3AE242605E600D84E9A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		9A16D3B124261A6900D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
-		9A3C8FFC2421506900A0320B /* Confirm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Confirm.storyboard; sourceTree = "<group>"; };
+		9A16D3B32426394400D84E9A /* names_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = names_en.json; sourceTree = "<group>"; };
+		9A16D3B42426394400D84E9A /* names_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = names_ru.json; sourceTree = "<group>"; };
+		9A16D3B824264B3000D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		9A16D3BA24264EE200D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Game.strings; sourceTree = "<group>"; };
+		9A16D3BC2426506700D84E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Confirm.storyboard; sourceTree = "<group>"; };
+		9A16D3BF2426506E00D84E9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Confirm.strings; sourceTree = "<group>"; };
+		9A16D3C12426507000D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Confirm.strings; sourceTree = "<group>"; };
 		9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmViewController.swift; path = Confirm/ConfirmViewController.swift; sourceTree = "<group>"; };
 		9A3C90002421617C00A0320B /* BlackoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewController.swift; sourceTree = "<group>"; };
 		FB02C00C2316FFB000FAD411 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
@@ -137,7 +144,6 @@
 		FBD0F78723C657EB00876394 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Prepare.strings; sourceTree = "<group>"; };
 		FBD0F78923C6581E00876394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Game.storyboard; sourceTree = "<group>"; };
 		FBD0F78C23C6582200876394 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Game.strings; sourceTree = "<group>"; };
-		FBD0F78E23C6582300876394 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Game.strings; sourceTree = "<group>"; };
 		FBD0F79023C658F300876394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NotExist.storyboard; sourceTree = "<group>"; };
 		FBD0F79323C658FA00876394 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/NotExist.strings; sourceTree = "<group>"; };
 		FBD0F79523C658FD00876394 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/NotExist.strings; sourceTree = "<group>"; };
@@ -189,6 +195,8 @@
 		9A16D3B2242637B900D84E9A /* Names */ = {
 			isa = PBXGroup;
 			children = (
+				9A16D3B32426394400D84E9A /* names_en.json */,
+				9A16D3B42426394400D84E9A /* names_ru.json */,
 			);
 			path = Names;
 			sourceTree = "<group>";
@@ -281,7 +289,7 @@
 				FBD0F79823C6599000876394 /* Scores.storyboard */,
 				FBC7A89823DA13A500496DEC /* AlreadyUsedWords.storyboard */,
 				FBCD4A1323FB26400019D62A /* GameBestScores.storyboard */,
-				9A3C8FFC2421506900A0320B /* Confirm.storyboard */,
+				9A16D3BD2426506700D84E9A /* Confirm.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -661,7 +669,9 @@
 				FB0414CA23EB535D0025F8FB /* country_ru.json in Resources */,
 				FBABA00923FC4D7A00E61B0A /* ScoreCell.xib in Resources */,
 				FBD0F79623C6599000876394 /* Scores.storyboard in Resources */,
+				9A16D3B52426394400D84E9A /* names_en.json in Resources */,
 				FBDC07AB23C7985000B12E1D /* WordsStack.xib in Resources */,
+				9A16D3B62426394400D84E9A /* names_ru.json in Resources */,
 				FBE9376022BD6EB000E85B13 /* LaunchScreen.storyboard in Resources */,
 				FBCD4A1423FB26400019D62A /* GameBestScores.storyboard in Resources */,
 				FBE9375D22BD6EB000E85B13 /* Assets.xcassets in Resources */,
@@ -672,7 +682,7 @@
 				FB02C0112317129600FAD411 /* NotificationView.xib in Resources */,
 				FB114F1823999962004E3BAF /* cities_en.json in Resources */,
 				FB0414C823EB53540025F8FB /* country_en.json in Resources */,
-				9A3C8FFD2421506900A0320B /* Confirm.storyboard in Resources */,
+				9A16D3BB2426506700D84E9A /* Confirm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -758,6 +768,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9A16D3BD2426506700D84E9A /* Confirm.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A16D3BC2426506700D84E9A /* Base */,
+				9A16D3BF2426506E00D84E9A /* en */,
+				9A16D3C12426507000D84E9A /* ru */,
+			);
+			name = Confirm.storyboard;
+			sourceTree = "<group>";
+		};
 		FBD0F78323C657DF00876394 /* Prepare.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -773,7 +793,7 @@
 			children = (
 				FBD0F78923C6581E00876394 /* Base */,
 				FBD0F78C23C6582200876394 /* en */,
-				FBD0F78E23C6582300876394 /* ru */,
+				9A16D3BA24264EE200D84E9A /* ru */,
 			);
 			name = Game.storyboard;
 			sourceTree = "<group>";
@@ -812,7 +832,7 @@
 			children = (
 				FBE9375722BD6EAE00E85B13 /* Base */,
 				FBD0F77E23C6488600876394 /* en */,
-				9A16D3B124261A6900D84E9A /* ru */,
+				9A16D3B824264B3000D84E9A /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

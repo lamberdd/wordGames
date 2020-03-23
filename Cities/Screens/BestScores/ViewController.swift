@@ -54,7 +54,7 @@ class BestScoresViewController: UIPageViewController, UIPageViewControllerDataSo
         pageControl.currentPageIndicatorTintColor = Constants.colors.main
         
         continueButton.backgroundColor = Constants.colors.main
-        continueButton.setTitle("Продолжить", for: .normal)
+        continueButton.setTitle(translate("continue"), for: .normal)
         continueButton.setTitleColor(.white, for: .normal)
         continueButton.setTitleColor(UIColor.white.withAlphaComponent(0.3), for: .highlighted)
         continueButton.addTarget(self, action: #selector(continueClicked(sender:)), for: .touchUpInside)

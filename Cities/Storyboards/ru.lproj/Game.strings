@@ -17,6 +17,9 @@
 /* Class = "UILabel"; text = "0"; ObjectID = "9d6-WY-JqR"; */
 "9d6-WY-JqR.text" = "0";
 
+/* Class = "UIButton"; normalTitle = "Й→И "; ObjectID = "DCq-dq-4jw"; */
+"DCq-dq-4jw.normalTitle" = "Й→И ";
+
 /* Class = "UILabel"; text = "Отвечает:"; ObjectID = "Eto-44-xQC"; */
 "Eto-44-xQC.text" = "Отвечает:";
 
@@ -37,3 +40,6 @@
 
 /* Class = "UITextField"; placeholder = "Название города"; ObjectID = "ugn-2z-2kh"; */
 "ugn-2z-2kh.placeholder" = "Название города";
+
+/* Class = "UIButton"; normalTitle = "Вышедшие слова"; ObjectID = "zt0-7J-m9q"; */
+"zt0-7J-m9q.normalTitle" = "Вышедшие слова";

@@ -19,7 +19,7 @@ class MainScreenCoordinator {
         viewController.presenter = MainScreenPresenter(view: viewController, coordinator: self)
     }
     
-    func showBestScores(bestPlayers: [GameType: [Player]]) {
+    func showBestScores(bestPlayers: [GameBestScoresModel]) {
         let gamesScoresVC = GameBestScoresVC.get(for: bestPlayers)
         
         let bestScores = BestScoresViewController()
@@ -33,6 +33,8 @@ class MainScreenCoordinator {
             setupPrepareScreen(segue.destination, gameType: .cities)
         case "countries":
             setupPrepareScreen(segue.destination, gameType: .countries)
+        case "names":
+            setupPrepareScreen(segue.destination, gameType: .names)
         default:
             print("Game undefined. Select cities")
         }

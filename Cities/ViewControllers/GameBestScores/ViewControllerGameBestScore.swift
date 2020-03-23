@@ -8,11 +8,18 @@
 
 import UIKit
 
+struct GameBestScoresModel {
+    let gameType: GameType
+    let players: [Player]
+}
+
 class GameBestScoresVC: UIViewController {
     
-    static func get(for gamePlayers: [GameType: [Player]]) -> [GameBestScoresVC] {
+    static func get(for gamePlayers: [GameBestScoresModel]) -> [GameBestScoresVC] {
         var viewControllers: [GameBestScoresVC] = []
-        for (game, players) in gamePlayers {
+        for item in gamePlayers {
+            let game = item.gameType
+            let players = item.players
             var scoresTableModel: [ScoresTableModel] = []
             players.forEach({ scoresTableModel.append(ScoresTableModel(name: $0.name, score: $0.score)) })
             if let viewController = UIStoryboard(name: "GameBestScores", bundle: nil).instantiateInitialViewController() as? GameBestScoresVC {

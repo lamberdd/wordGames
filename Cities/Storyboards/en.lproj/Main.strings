@@ -1,4 +1,7 @@
 
+/* Class = "UILabel"; text = "Имена"; ObjectID = "7sX-8I-DWr"; */
+"7sX-8I-DWr.text" = "Firstnames";
+
 /* Class = "UILabel"; text = "Города"; ObjectID = "Hef-RW-THE"; */
 "Hef-RW-THE.text" = "Cities";
 

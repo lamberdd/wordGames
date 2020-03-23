@@ -1,4 +1,7 @@
 
+/* Class = "UILabel"; text = "Имена"; ObjectID = "7sX-8I-DWr"; */
+"7sX-8I-DWr.text" = "Имена";
+
 /* Class = "UILabel"; text = "Города"; ObjectID = "Hef-RW-THE"; */
 "Hef-RW-THE.text" = "Города";
 
@@ -11,5 +14,8 @@
 /* Class = "UINavigationItem"; title = "Выберите игру"; ObjectID = "j2i-WR-zu7"; */
 "j2i-WR-zu7.title" = "Выберите игру";
 
-/* Class = "UIButton"; normalTitle = "Лучшие игроки"; ObjectID = "mlg-5P-8m3"; */
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kds-xg-rlN"; */
+"kds-xg-rlN.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Лучшие результаты"; ObjectID = "mlg-5P-8m3"; */
 "mlg-5P-8m3.normalTitle" = "Лучшие результаты";

@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Заголовок"; ObjectID = "9Ba-Iu-DNH"; */
+"9Ba-Iu-DNH.text" = "Заголовок";
+
+/* Class = "UIButton"; normalTitle = "Подтвердить"; ObjectID = "KSi-Hc-ehP"; */
+"KSi-Hc-ehP.normalTitle" = "Подтвердить";
+
+/* Class = "UIButton"; normalTitle = "Отмена"; ObjectID = "miD-EV-HsD"; */
+"miD-EV-HsD.normalTitle" = "Отмена";
+
+/* Class = "UILabel"; text = "Описание"; ObjectID = "pzv-pk-3mo"; */
+"pzv-pk-3mo.text" = "Описание";
