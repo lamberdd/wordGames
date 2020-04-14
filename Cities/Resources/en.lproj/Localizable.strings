@@ -17,6 +17,7 @@
 "cities" = "Cities";
 "countries" = "Countries";
 "names" = "Firstnames";
+"chemElems" = "Chemical elements";
 
 //MARK: Game screen
 "you_on" = "You on";
@@ -27,5 +28,6 @@
 "cities_not_exist" = "The city you specified does not exist :(";
 "countries_not_exist" = "The country you specified does not exist :(";
 "names_not_exist" = "The firstname you specified does not exist :(";
+"chemElems_not_exist" = "The chemical element you specified does not exist :(";
 "you_may_add_it" = "But if it's not, then you can add it";
 

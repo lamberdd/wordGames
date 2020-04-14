@@ -89,7 +89,7 @@ class GameView: UIViewController, GameViewProtocol {
     }
     
     func setWord(_ word: String) {
-        titleGame.text = word
+//        titleGame.text = word
         wordsStack.setNext(word: word)
     }
     

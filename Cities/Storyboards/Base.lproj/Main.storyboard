@@ -92,16 +92,41 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имена" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sX-8I-DWr">
                                 <rect key="frame" x="29" y="429" width="130" height="21"/>
                                 <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3C-Id-WCb" customClass="MenuButton" customModule="Cities" customModuleProvider="target">
+                                <rect key="frame" x="231.5" y="324" width="100" height="100"/>
+                                <color key="backgroundColor" red="0.8980392157" green="1" blue="0.92941176469999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cbm-MH-NZe"/>
+                                    <constraint firstAttribute="width" secondItem="T3C-Id-WCb" secondAttribute="height" multiplier="1:1" id="dKe-5i-nit"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="chemElems"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="b2S-Rw-saS" kind="presentation" identifier="chemElems" modalPresentationStyle="fullScreen" id="M0K-9c-4qW"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Химические элементы" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCR-aJ-ZcP">
+                                <rect key="frame" x="216.5" y="429" width="130" height="41.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Hef-RW-THE" firstAttribute="top" secondItem="jm0-Xg-jFl" secondAttribute="bottom" constant="5" id="7gK-rS-eqr"/>
+                            <constraint firstItem="YCR-aJ-ZcP" firstAttribute="centerX" secondItem="T3C-Id-WCb" secondAttribute="centerX" id="9hI-Qx-3vn"/>
                             <constraint firstItem="mlg-5P-8m3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cc2-Kj-vh5"/>
                             <constraint firstItem="kds-xg-rlN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.2" id="FJI-y0-0qi"/>
                             <constraint firstItem="HwG-MM-D9T" firstAttribute="centerY" secondItem="jm0-Xg-jFl" secondAttribute="centerY" id="Ghx-8m-u5E"/>
+                            <constraint firstItem="T3C-Id-WCb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.2" id="HDH-jw-nhF"/>
                             <constraint firstItem="X3t-S7-dmb" firstAttribute="centerX" secondItem="HwG-MM-D9T" secondAttribute="centerX" id="P5X-LL-YWf"/>
                             <constraint firstItem="jm0-Xg-jFl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="PPc-8E-n3y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mlg-5P-8m3" secondAttribute="trailing" constant="20" id="Sdr-nP-HLJ"/>
@@ -111,11 +136,14 @@
                             <constraint firstItem="jm0-Xg-jFl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.4" id="aWP-UT-EUs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mlg-5P-8m3" secondAttribute="bottom" constant="20" id="bip-EB-PtR"/>
                             <constraint firstItem="X3t-S7-dmb" firstAttribute="top" secondItem="HwG-MM-D9T" secondAttribute="bottom" constant="5" id="exs-Px-uhG"/>
+                            <constraint firstItem="YCR-aJ-ZcP" firstAttribute="top" secondItem="T3C-Id-WCb" secondAttribute="bottom" constant="5" id="gni-mW-dnq"/>
                             <constraint firstItem="X3t-S7-dmb" firstAttribute="width" secondItem="HwG-MM-D9T" secondAttribute="width" multiplier="1.3" id="hq4-HO-Uk1"/>
                             <constraint firstItem="Hef-RW-THE" firstAttribute="width" secondItem="jm0-Xg-jFl" secondAttribute="width" multiplier="1.3" id="kgD-Bn-B9G"/>
                             <constraint firstItem="7sX-8I-DWr" firstAttribute="centerX" secondItem="kds-xg-rlN" secondAttribute="centerX" id="l6M-xh-lkC"/>
                             <constraint firstItem="kds-xg-rlN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.5" id="osN-yJ-kgv"/>
                             <constraint firstItem="HwG-MM-D9T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="tdQ-il-a5A"/>
+                            <constraint firstItem="T3C-Id-WCb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.5" id="wTc-Xd-jQ2"/>
+                            <constraint firstItem="YCR-aJ-ZcP" firstAttribute="width" secondItem="T3C-Id-WCb" secondAttribute="width" multiplier="1.3" id="xwZ-G9-LAG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -156,6 +184,16 @@
             </objects>
             <point key="canvasLocation" x="1762" y="217"/>
         </scene>
+        <!--prepareGame-->
+        <scene sceneID="fNi-Sb-WBe">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Prepare" referencedIdentifier="prepareGame" id="b2S-Rw-saS" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uEd-Jc-p5r"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bLd-gw-Enm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1659" y="319"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="B8H-Mf-bhc">
             <objects>
@@ -180,6 +218,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chemElems" width="384" height="384"/>
         <image name="cities" width="596" height="596"/>
         <image name="countries" width="384" height="384"/>
         <image name="names" width="567" height="567"/>

@@ -35,6 +35,8 @@ class MainScreenCoordinator {
             setupPrepareScreen(segue.destination, gameType: .countries)
         case "names":
             setupPrepareScreen(segue.destination, gameType: .names)
+        case "chemElems":
+            setupPrepareScreen(segue.destination, gameType: .chemElems)
         default:
             print("Game undefined. Select cities")
         }

@@ -13,6 +13,8 @@
 		9A16D3BB2426506700D84E9A /* Confirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3BD2426506700D84E9A /* Confirm.storyboard */; };
 		9A3C8FFF242154CF00A0320B /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */; };
 		9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C90002421617C00A0320B /* BlackoutViewController.swift */; };
+		9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0C242BE15900F641DA /* chemElems_ru.json */; };
+		9A7F2F0F242BE25500F641DA /* chemElems_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0E242BE25500F641DA /* chemElems_en.json */; };
 		FB02C00D2316FFB000FAD411 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB02C00C2316FFB000FAD411 /* NotificationView.swift */; };
 		FB02C0112317129600FAD411 /* NotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB02C0102317129600FAD411 /* NotificationView.xib */; };
 		FB0414C823EB53540025F8FB /* country_en.json in Resources */ = {isa = PBXBuildFile; fileRef = FB0414C723EB53540025F8FB /* country_en.json */; };
@@ -97,6 +99,8 @@
 		9A16D3C12426507000D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Confirm.strings; sourceTree = "<group>"; };
 		9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmViewController.swift; path = Confirm/ConfirmViewController.swift; sourceTree = "<group>"; };
 		9A3C90002421617C00A0320B /* BlackoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewController.swift; sourceTree = "<group>"; };
+		9A7F2F0C242BE15900F641DA /* chemElems_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chemElems_ru.json; sourceTree = "<group>"; };
+		9A7F2F0E242BE25500F641DA /* chemElems_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chemElems_en.json; sourceTree = "<group>"; };
 		FB02C00C2316FFB000FAD411 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		FB02C0102317129600FAD411 /* NotificationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationView.xib; sourceTree = "<group>"; };
 		FB0414C723EB53540025F8FB /* country_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_en.json; sourceTree = "<group>"; };
@@ -199,6 +203,15 @@
 				9A16D3B42426394400D84E9A /* names_ru.json */,
 			);
 			path = Names;
+			sourceTree = "<group>";
+		};
+		9A7F2F0B242BE13E00F641DA /* ChemElems */ = {
+			isa = PBXGroup;
+			children = (
+				9A7F2F0C242BE15900F641DA /* chemElems_ru.json */,
+				9A7F2F0E242BE25500F641DA /* chemElems_en.json */,
+			);
+			path = ChemElems;
 			sourceTree = "<group>";
 		};
 		FB02C00B2316FF9400FAD411 /* notificationView */ = {
@@ -530,6 +543,7 @@
 		FBE9377622BD75F000E85B13 /* Storage */ = {
 			isa = PBXGroup;
 			children = (
+				9A7F2F0B242BE13E00F641DA /* ChemElems */,
 				9A16D3B2242637B900D84E9A /* Names */,
 				FB0414C623EB531F0025F8FB /* Country */,
 				FBDF1B2123EB52C500600B53 /* Cities */,
@@ -673,9 +687,11 @@
 				FBDC07AB23C7985000B12E1D /* WordsStack.xib in Resources */,
 				9A16D3B62426394400D84E9A /* names_ru.json in Resources */,
 				FBE9376022BD6EB000E85B13 /* LaunchScreen.storyboard in Resources */,
+				9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */,
 				FBCD4A1423FB26400019D62A /* GameBestScores.storyboard in Resources */,
 				FBE9375D22BD6EB000E85B13 /* Assets.xcassets in Resources */,
 				FBC7A89923DA13A500496DEC /* AlreadyUsedWords.storyboard in Resources */,
+				9A7F2F0F242BE25500F641DA /* chemElems_en.json in Resources */,
 				FBE9375822BD6EAE00E85B13 /* Main.storyboard in Resources */,
 				FBD0F78123C657DF00876394 /* Prepare.storyboard in Resources */,
 				FB39088822BF961800C32338 /* cities.json in Resources */,

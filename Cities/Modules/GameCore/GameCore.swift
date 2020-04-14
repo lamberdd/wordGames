@@ -9,7 +9,7 @@
 import Foundation
 
 enum GameType: String, CaseIterable {
-    case cities, countries, names
+    case cities, countries, names, chemElems
 }
 
 enum AnswerType {
@@ -44,7 +44,7 @@ class GameCore {
         let obj = arrayHelper.getRandom(words: words, exclude: used)
         used.append(obj)
         currentWord = obj
-        return obj["name"]!
+        return current()
     }
     
     func generateWith(firstLetter: String, noSave: Bool = false) -> String {
@@ -52,6 +52,9 @@ class GameCore {
         let obj = arrayHelper.getRandom(words: filterWords, exclude: used)
         if !noSave {
             used.append(obj)
+            if let deleteIndex = words.firstIndex(where: { $0["search"] == obj["search"] }) {
+                words.remove(at: deleteIndex)
+            }
             currentWord = obj
         }
         return obj["name"]!
@@ -116,7 +119,11 @@ class GameCore {
     }
     
     func current() -> String {
-        return currentWord["name"]!
+        var name = currentWord["name"] ?? ""
+        if let description = currentWord["description"] {
+            name.append(" \(description)")
+        }
+        return name
     }
     
     private let replaceableLetter = ["й":"и", "ё":"е"]
