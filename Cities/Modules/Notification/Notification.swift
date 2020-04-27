@@ -10,7 +10,7 @@ import UIKit
 
 class Notification {
     unowned let viewController: UIViewController
-    unowned let rootView: UIView
+    weak var rootView: UIView?
     let notificationView: NotificationView
     var interactive: InteractiveNotification? = nil
     
@@ -31,13 +31,14 @@ class Notification {
         rootView = viewController.navigationController?.view ?? viewController.view!
         notificationView = NotificationView(frame: .zero)
         notificationView.translatesAutoresizingMaskIntoConstraints = false
-        rootView.addSubview(notificationView)
+        rootView?.addSubview(notificationView)
         closeTopConstant = -height-10
         setupLayout()
-        interactive = InteractiveNotification(notificationView: notificationView, rootView: rootView, topConstraint: topAnchor, openConstant: margin, closeConstant: closeTopConstant)
+        interactive = InteractiveNotification(notificationView: notificationView, rootView: rootView!, topConstraint: topAnchor, openConstant: margin, closeConstant: closeTopConstant)
     }
     
     private func setupLayout() {
+        guard let rootView = self.rootView else { return }
         if #available(iOS 11.0, *) {
             notificationView.leadingAnchor.constraint(equalTo: rootView.safeAreaLayoutGuide.leadingAnchor, constant: margin).isActive = true
         } else {
@@ -69,15 +70,15 @@ class Notification {
     //MARK: - Private methods
     //MARK: Animations
     private func showAnimation(closeAfter timeout: Double) {
-        UIView.animate(withDuration: animationTime, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: [], animations: {
-            self.topAnchor.constant = self.margin
-            self.rootView.layoutIfNeeded()
-        }) { (finished) in
+        UIView.animate(withDuration: animationTime, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0, options: [], animations: { [weak self] in
+            self?.topAnchor.constant = self?.margin ?? 0
+            self?.rootView?.layoutIfNeeded()
+        }) { [weak self] (finished) in
             let closeTimer = Timer.scheduledTimer(withTimeInterval: timeout, repeats: false, block: { (t) in
-                self.closeAnimation()
+                self?.closeAnimation()
             })
-            self.interactive?.onClose = {
-                self.isShow = false
+            self?.interactive?.onClose = {
+                self?.isShow = false
                 closeTimer.invalidate()
             }
         }
@@ -89,7 +90,7 @@ class Notification {
         if interactive?.isActive != true {
             UIView.animate(withDuration: animationTime/2, animations: {
                 self.topAnchor.constant = self.closeTopConstant
-                self.rootView.layoutIfNeeded()
+                self.rootView?.layoutIfNeeded()
             }) { (finish) in
                 self.isShow = false
             }

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="f8I-P3-6zc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert View Controller-->
+        <scene sceneID="vix-x7-reN">
+            <objects>
+                <viewController modalPresentationStyle="overFullScreen" id="f8I-P3-6zc" customClass="AlertViewController" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jif-kP-Um9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nu1-f5-dmS">
+                                <rect key="frame" x="45" y="167" width="285" height="333.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JME-yP-iMS">
+                                        <rect key="frame" x="0.0" y="0.0" width="285" height="54"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOb-g8-gsr">
+                                                <rect key="frame" x="101" y="16" width="83" height="22"/>
+                                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="JOb-g8-gsr" firstAttribute="centerY" secondItem="JME-yP-iMS" secondAttribute="centerY" id="1it-et-F7a"/>
+                                            <constraint firstItem="JOb-g8-gsr" firstAttribute="centerX" secondItem="JME-yP-iMS" secondAttribute="centerX" id="dtk-CL-YZb"/>
+                                            <constraint firstAttribute="height" constant="54" id="xxn-Bq-ESy"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2v-aK-Q29">
+                                        <rect key="frame" x="15" y="157.5" width="255" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFV-1r-4mq">
+                                        <rect key="frame" x="65" y="282.5" width="155" height="36"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="155" id="V1f-Ic-aMP"/>
+                                            <constraint firstAttribute="height" constant="36" id="qJA-Tt-Qzs"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="18"/>
+                                        <state key="normal" title="Продолжить">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="18"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onContinue:" destination="f8I-P3-6zc" eventType="touchUpInside" id="M7c-Xb-fB8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.83137254901960778" green="0.98431372549019602" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="400" id="4kE-UT-KA5"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="460" id="9Op-LJ-rnF"/>
+                                    <constraint firstAttribute="trailing" secondItem="JME-yP-iMS" secondAttribute="trailing" id="A94-w3-X9j"/>
+                                    <constraint firstItem="w2v-aK-Q29" firstAttribute="centerY" secondItem="nu1-f5-dmS" secondAttribute="centerY" id="JGu-Hc-HBR"/>
+                                    <constraint firstAttribute="trailing" secondItem="w2v-aK-Q29" secondAttribute="trailing" constant="15" id="Q9I-ai-k9Z"/>
+                                    <constraint firstItem="w2v-aK-Q29" firstAttribute="leading" secondItem="nu1-f5-dmS" secondAttribute="leading" constant="15" id="U39-X3-V62"/>
+                                    <constraint firstAttribute="bottom" secondItem="MFV-1r-4mq" secondAttribute="bottom" constant="15" id="ajh-OI-oqx"/>
+                                    <constraint firstItem="JME-yP-iMS" firstAttribute="top" secondItem="nu1-f5-dmS" secondAttribute="top" id="d6S-aX-ilh"/>
+                                    <constraint firstItem="MFV-1r-4mq" firstAttribute="centerX" secondItem="nu1-f5-dmS" secondAttribute="centerX" id="jLq-k2-CgH"/>
+                                    <constraint firstItem="JME-yP-iMS" firstAttribute="leading" secondItem="nu1-f5-dmS" secondAttribute="leading" id="vQ0-Gr-1Sk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="nu1-f5-dmS" firstAttribute="centerY" secondItem="jif-kP-Um9" secondAttribute="centerY" id="Ha9-rW-Wlh"/>
+                            <constraint firstItem="nu1-f5-dmS" firstAttribute="height" secondItem="jif-kP-Um9" secondAttribute="height" multiplier="0.5" priority="950" id="a7L-LQ-TvG"/>
+                            <constraint firstItem="nu1-f5-dmS" firstAttribute="width" secondItem="jif-kP-Um9" secondAttribute="width" multiplier="0.76" priority="950" id="slm-US-TOa"/>
+                            <constraint firstItem="nu1-f5-dmS" firstAttribute="centerX" secondItem="jif-kP-Um9" secondAttribute="centerX" id="yTG-Q7-b3c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3jY-kN-nqE"/>
+                    </view>
+                    <connections>
+                        <outlet property="textLabel" destination="w2v-aK-Q29" id="c6l-lZ-GQC"/>
+                        <outlet property="titleLabel" destination="JOb-g8-gsr" id="vbx-PJ-bze"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N4S-Ai-jC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-114" y="159"/>
+        </scene>
+    </scenes>
+</document>

@@ -59,6 +59,13 @@ class Players {
         } else {
             currentNumber = newNumber
         }
+        if players[currentNumber].left && existActivePlayers() {
+            nextPlayer()
+        }
+    }
+    
+    func leftCurrent() {
+        players[currentNumber].left = true
     }
     
     func getPlayers() -> [Player] {
@@ -71,5 +78,10 @@ class Players {
             total += player.score
         }
         return total
+    }
+    
+    func existActivePlayers() -> Bool { // Остались ли игроки, которые не вылетели
+        let activePlayer = players.first(where: { $0.left == false })
+        return (activePlayer != nil)
     }
 }

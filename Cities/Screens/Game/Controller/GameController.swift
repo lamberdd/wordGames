@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 
+
+
 class GameController {
     
     private let computerName = translate("computer")
@@ -20,14 +22,17 @@ class GameController {
     private let players: Players
     private var usedWords: [UsedWord]
     
+    private let timeout = TimeoutHelper(seconds: 59)
+    private var timer: Timer? = nil
+    
     deinit {
         print("GameController deinited")
     }
     
-    init(view: GameViewProtocol, players: [String], gameCore: GameCore, helpCount: Int, coordinator: GameCoordinator) {
+    init(view: GameViewProtocol, gameSettings: GameInitialSettings, coordinator: GameCoordinator) {
         self.view = view
-        self.gameCore = gameCore
-        self.players = Players(players: players, helpCount: helpCount)
+        self.gameCore = gameSettings.gameCore
+        self.players = Players(players: gameSettings.playerNames, helpCount: gameSettings.hintsCount)
         self.coordinator = coordinator
         
         self.usedWords = []
@@ -42,16 +47,48 @@ class GameController {
         view.setLastLetter(lastLetter)
         view.setCurrentPlayer(name: self.players.current, score: self.players.scoreForCurrent())
         
-        if helpCount == 0 {
+        if gameSettings.hintsCount == 0 {
             view.hideHelps()
             view.hideHelpsBlock()
         } else {
-            view.setHelpsCount(helpCount)
+            view.setHelpsCount(gameSettings.hintsCount)
         }
         if self.players.count == 1 {
             view.hideSkip()
         }
         
+        if gameSettings.timeGame {
+            self.view.setTitle(text: timeout.userString, color: nil)
+            setupTimer()
+        }
+        
+    }
+    
+    private func setupTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] (t) in
+            self?.timeout.decrement()
+            guard let timeLeft = self?.timeout.time, let timeoutUserString = self?.timeout.userString else { return }
+            let color = timeLeft < 8 ? UIColor.systemRed : nil
+            self?.view.setTitle(text: timeoutUserString, color: color)
+            if timeLeft == 0 {
+                self?.leftCurrentPlayer()
+                self?.timeout.reset()
+            }
+        }
+    }
+    
+    private func leftCurrentPlayer() {
+        players.leftCurrent()
+        view.leftPlayer(name: players.current)
+        if players.count == 1 || players.existActivePlayers() == false {
+            timer?.invalidate()
+            coordinator.showAlert(title: "Игра завершена", text: "Время ответа истекло") { [weak self] in
+                self?.finishGame()
+            }
+        } else {
+            players.nextPlayer()
+            updateView(animateSuccess: false, updateWord: false)
+        }
     }
     
     func answer(word: String) {
@@ -61,6 +98,8 @@ class GameController {
         }
         let status = gameCore.answer(word)
         if status == .success {
+            timeout.reset()
+            timer?.fire() // Обновляем таймер
             successAnswer()
         } else if status == .alreadyUsed {
             view.animateAlreadyUsed()
@@ -88,17 +127,22 @@ class GameController {
     func exit() {
         
         coordinator.showConfirmExit(onConfirm: { [weak self] in
-            if let players = self?.players, players.totalScore() > 0 {
-                self?.coordinator.showGameScores(players: players.getPlayers()) {
-                    if let core = self?.gameCore {
-                        AppSettings.global.updateScores(for: core.type, players: players.getPlayers())
-                    }
-                    self?.coordinator.closeGame()
-                }
-            } else {
-                self?.coordinator.closeGameToPrepare()
-            }
+            self?.finishGame()
         })
+        
+    }
+    
+    private func finishGame() {
+        if players.totalScore() > 0 {
+            self.coordinator.showGameScores(players: players.getPlayers()) { [weak self] in
+                if let core = self?.gameCore, let players = self?.players {
+                    AppSettings.global.updateScores(for: core.type, players: players.getPlayers())
+                }
+                self?.coordinator.closeGame()
+            }
+        } else {
+            coordinator.closeGameToPrepare()
+        }
     }
     
     func help() {

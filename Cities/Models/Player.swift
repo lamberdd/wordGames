@@ -12,6 +12,7 @@ struct Player {
     var name: String
     var score: Int = 0
     var helps: Int
+    var left = false
     
     mutating func decrementHelps() {
         helps = (helps == 0) ? 0 : helps-1

@@ -15,6 +15,9 @@
 		9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C90002421617C00A0320B /* BlackoutViewController.swift */; };
 		9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0C242BE15900F641DA /* chemElems_ru.json */; };
 		9A7F2F0F242BE25500F641DA /* chemElems_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0E242BE25500F641DA /* chemElems_en.json */; };
+		9ADBD9F2244F8F71008CE8D7 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */; };
+		9ADBD9F4244F9265008CE8D7 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBD9F3244F9265008CE8D7 /* AlertViewController.swift */; };
+		9AF9FA9C24479ACB00EC991B /* TimeoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF9FA9B24479ACB00EC991B /* TimeoutHelper.swift */; };
 		FB02C00D2316FFB000FAD411 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB02C00C2316FFB000FAD411 /* NotificationView.swift */; };
 		FB02C0112317129600FAD411 /* NotificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB02C0102317129600FAD411 /* NotificationView.xib */; };
 		FB0414C823EB53540025F8FB /* country_en.json in Resources */ = {isa = PBXBuildFile; fileRef = FB0414C723EB53540025F8FB /* country_en.json */; };
@@ -101,6 +104,9 @@
 		9A3C90002421617C00A0320B /* BlackoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewController.swift; sourceTree = "<group>"; };
 		9A7F2F0C242BE15900F641DA /* chemElems_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chemElems_ru.json; sourceTree = "<group>"; };
 		9A7F2F0E242BE25500F641DA /* chemElems_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chemElems_en.json; sourceTree = "<group>"; };
+		9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		9ADBD9F3244F9265008CE8D7 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		9AF9FA9B24479ACB00EC991B /* TimeoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutHelper.swift; sourceTree = "<group>"; };
 		FB02C00C2316FFB000FAD411 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		FB02C0102317129600FAD411 /* NotificationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationView.xib; sourceTree = "<group>"; };
 		FB0414C723EB53540025F8FB /* country_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_en.json; sourceTree = "<group>"; };
@@ -236,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				FB25B1D023DA1DA500ECB558 /* Translater.swift */,
+				9AF9FA9B24479ACB00EC991B /* TimeoutHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -303,6 +310,7 @@
 				FBC7A89823DA13A500496DEC /* AlreadyUsedWords.storyboard */,
 				FBCD4A1323FB26400019D62A /* GameBestScores.storyboard */,
 				9A16D3BD2426506700D84E9A /* Confirm.storyboard */,
+				9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -390,6 +398,7 @@
 			children = (
 				FBABA00E23FC558600E61B0A /* GameBestScores */,
 				9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */,
+				9ADBD9F3244F9265008CE8D7 /* AlertViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -698,6 +707,7 @@
 				FB02C0112317129600FAD411 /* NotificationView.xib in Resources */,
 				FB114F1823999962004E3BAF /* cities_en.json in Resources */,
 				FB0414C823EB53540025F8FB /* country_en.json in Resources */,
+				9ADBD9F2244F8F71008CE8D7 /* Alert.storyboard in Resources */,
 				9A16D3BB2426506700D84E9A /* Confirm.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -748,6 +758,7 @@
 				FBB22D7623FF066D00F4903E /* ConstraintConfiguratorBestScores.swift in Sources */,
 				FBC6E0472389655F002A87FD /* ScoresViewController.swift in Sources */,
 				FB6EA31B22C0029900A025BC /* GameCore.swift in Sources */,
+				9AF9FA9C24479ACB00EC991B /* TimeoutHelper.swift in Sources */,
 				FBC7A89E23DA1C0000496DEC /* UsedWords.swift in Sources */,
 				FBDA074D2390335200EF791B /* UserWords.swift in Sources */,
 				FB25B1D123DA1DA500ECB558 /* Translater.swift in Sources */,
@@ -758,6 +769,7 @@
 				FBFCE922232E9AF40042465F /* NotificationImage.swift in Sources */,
 				FB499250230C6DF900559F5D /* Player.swift in Sources */,
 				FBABA01523FC586300E61B0A /* ViewController.swift in Sources */,
+				9ADBD9F4244F9265008CE8D7 /* AlertViewController.swift in Sources */,
 				FBF8862C23E0BFDF00931867 /* MainScreenCoordinator.swift in Sources */,
 				FBF8862A23E0BF8400931867 /* MainScreenViewProtocol.swift in Sources */,
 				FB02C00D2316FFB000FAD411 /* NotificationView.swift in Sources */,

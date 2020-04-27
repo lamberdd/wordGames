@@ -69,7 +69,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.83137254901960778" green="0.98431372549019602" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="pzv-pk-3mo" firstAttribute="centerX" secondItem="tSA-7v-czV" secondAttribute="centerX" id="0kh-ii-Wrm"/>
                                     <constraint firstItem="miD-EV-HsD" firstAttribute="width" secondItem="tSA-7v-czV" secondAttribute="width" multiplier="0.5" id="2eD-vk-hbs"/>

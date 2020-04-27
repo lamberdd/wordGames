@@ -12,4 +12,5 @@ struct GameInitialSettings {
     let playerNames: [String]
     let gameCore: GameCore
     let hintsCount: Int
+    let timeGame: Bool
 }

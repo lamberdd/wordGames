@@ -83,6 +83,11 @@ class GameView: UIViewController, GameViewProtocol {
     }
     
     //MARK: View protocol
+    func setTitle(text: String, color: UIColor?) {
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: color ?? UIColor.white]
+        self.title = text
+    }
+    
     func setCurrentPlayer(name: String, score: Int) {
         playerNameLabel.setAnimated(text: name)
         self.score.text = String(score)
@@ -134,6 +139,10 @@ class GameView: UIViewController, GameViewProtocol {
     func animateAlreadyUsed() {
         textField.shake(underLineColor: Constants.colors.warning)
         notification.show(text: "Такой город уже был назван", image: NotificationImages.alreadyUsed)
+    }
+    
+    func leftPlayer(name: String) {
+        notification.show(text: "Время истекло. Игрок \"\(name)\" завершил игру", image: NotificationImages.alreadyUsed)
     }
     
     func shakeErrorTextField() {

@@ -28,7 +28,7 @@ class GameCoordinator {
         let navigationController = UIStoryboard(name: "Game", bundle: nil).instantiateViewController(withIdentifier: "GameView") as! UINavigationController
         gameView = navigationController.topViewController as! GameView
         gameView?.viewDidLoaded = {
-            self.gameView?.controller = GameController(view: self.gameView!, players: self.gameSettings.playerNames, gameCore: self.gameSettings.gameCore, helpCount: self.gameSettings.hintsCount, coordinator: self)
+            self.gameView?.controller = GameController(view: self.gameView!, gameSettings: self.gameSettings, coordinator: self)
         }
         prepareVC.present(navigationController, animated: true, completion: nil)
     }
@@ -71,6 +71,12 @@ class GameCoordinator {
                 self.gameView?.present(scoresScreen, animated: true, completion: nil)
             }
         }
+    }
+    
+    func showAlert(title: String, text: String, onContinue: @escaping ()->Void) {
+        guard let alertScreen = UIStoryboard(name: "Alert", bundle: nil).instantiateInitialViewController() as? AlertViewController else { return }
+        gameView?.present(alertScreen, animated: true, completion: nil)
+        alertScreen.setup(title: title, text: text, callback: onContinue)
     }
     
     func closeGame() {

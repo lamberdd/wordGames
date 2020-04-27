@@ -34,7 +34,7 @@ class PrepareScreenViewController: UIViewController, UITableViewDelegate, UITabl
         let gameCore = GameCore(type: gameType)
         let helpCount = helpSwitch.isOn ? AppSettings.global.getHelpCount() : 0
         //TODO: Continue Game Coordinator
-        let gameSettings = GameInitialSettings(playerNames: self.getPlayers(), gameCore: gameCore, hintsCount: helpCount)
+        let gameSettings = GameInitialSettings(playerNames: self.getPlayers(), gameCore: gameCore, hintsCount: helpCount, timeGame: timeGameSwitch.isOn)
         let gameCoordinator = GameCoordinator(prepareViewController: self, gameSettings: gameSettings)
         gameCoordinator.startGame()
     }
@@ -42,6 +42,7 @@ class PrepareScreenViewController: UIViewController, UITableViewDelegate, UITabl
     @IBOutlet weak var usersNameTable: UITableView!
     @IBOutlet weak var countPlayers: UIStepper!
     @IBOutlet weak var helpSwitch: UISwitch!
+    @IBOutlet weak var timeGameSwitch: UISwitch!
     @IBOutlet weak var usersTableHeight: NSLayoutConstraint!
     @IBOutlet weak var backgroundImage: UIImageView!
     
