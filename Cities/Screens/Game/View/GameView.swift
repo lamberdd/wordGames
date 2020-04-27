@@ -138,11 +138,11 @@ class GameView: UIViewController, GameViewProtocol {
     
     func animateAlreadyUsed() {
         textField.shake(underLineColor: Constants.colors.warning)
-        notification.show(text: "Такой город уже был назван", image: NotificationImages.alreadyUsed)
+        notification.show(text: "Такой город уже был назван", image: NotificationImages.oops)
     }
     
     func leftPlayer(name: String) {
-        notification.show(text: "Время истекло. Игрок \"\(name)\" завершил игру", image: NotificationImages.alreadyUsed)
+        notification.show(text: "Время истекло. Игрок \"\(name)\" завершил игру", image: NotificationImages.sad)
     }
     
     func shakeErrorTextField() {

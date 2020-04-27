@@ -9,6 +9,7 @@
 import UIKit
 
 class NotificationImages {
-    static let alreadyUsed = UIImage(named: "sad_yellow")!
+    static let sad = UIImage(named: "sad_yellow")!
+    static let oops = UIImage(named: "oops")!
     
 }

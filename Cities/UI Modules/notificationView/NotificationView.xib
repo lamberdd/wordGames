@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -39,7 +37,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sad_yellow" translatesAutoresizingMaskIntoConstraints="NO" id="lVp-Lh-CT1">
-                    <rect key="frame" x="287.5" y="19" width="85.5" height="85"/>
+                    <rect key="frame" x="299" y="24.5" width="74" height="74"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="lVp-Lh-CT1" secondAttribute="height" multiplier="1:1" id="jMV-AF-QpH"/>
                     </constraints>
@@ -49,11 +47,11 @@
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1o7-Fw-uVB" secondAttribute="bottom" id="1Yc-B6-wkm"/>
                 <constraint firstItem="5ye-HA-x6O" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="7IK-1C-s2R"/>
-                <constraint firstItem="lVp-Lh-CT1" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.22" priority="900" id="Bmd-es-7ai"/>
                 <constraint firstItem="5ye-HA-x6O" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.63" id="FyH-na-VY5"/>
                 <constraint firstItem="1o7-Fw-uVB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MQJ-ut-9jL"/>
                 <constraint firstItem="lVp-Lh-CT1" firstAttribute="height" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.8" id="WTL-AM-kTR"/>
                 <constraint firstItem="1o7-Fw-uVB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="YRF-7s-CzM"/>
+                <constraint firstItem="lVp-Lh-CT1" firstAttribute="height" secondItem="1o7-Fw-uVB" secondAttribute="height" multiplier="0.6" id="f4C-T2-37R"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="lVp-Lh-CT1" secondAttribute="trailing" constant="15" id="gME-Wo-YFF"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1o7-Fw-uVB" secondAttribute="trailing" id="itq-BE-gqk"/>
                 <constraint firstItem="5ye-HA-x6O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="o4l-Tc-c1G"/>
@@ -65,6 +63,6 @@
         </view>
     </objects>
     <resources>
-        <image name="sad_yellow" width="993" height="993"/>
+        <image name="sad_yellow" width="384" height="384"/>
     </resources>
 </document>
