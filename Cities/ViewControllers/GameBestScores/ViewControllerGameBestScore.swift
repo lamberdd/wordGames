@@ -33,6 +33,7 @@ class GameBestScoresVC: UIViewController {
 
     @IBOutlet weak var gameName: UILabel!
     @IBOutlet weak var scoresTable: ScoresTable!
+    @IBOutlet weak var singleLable: UILabel!
     
     private var titleName: String = ""
     private var scores: [ScoresTableModel] = []
@@ -52,7 +53,12 @@ class GameBestScoresVC: UIViewController {
     
     private func updateView() {
         gameName.text = titleName
-        scoresTable.update(data: scores)
+        if scores.count > 0 {
+            scoresTable.update(data: scores)
+            singleLable.isHidden = true
+        } else {
+            singleLable.text = translate("no_game_scores")
+        }
     }
 
 }

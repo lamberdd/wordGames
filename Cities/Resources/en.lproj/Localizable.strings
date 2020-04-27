@@ -31,3 +31,5 @@
 "chemElems_not_exist" = "The chemical element you specified does not exist :(";
 "you_may_add_it" = "But if it's not, then you can add it";
 
+//MARK: Best score screen
+"no_game_scores" = "There are no results for this game, you have not played it yet";

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bt9-EY-soQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bt9-EY-soQ">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,12 +40,21 @@
                                         <rect key="frame" x="0.0" y="55" width="292.5" height="365.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Для этой игры еще нет очков" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXx-O9-wxy">
+                                        <rect key="frame" x="15" y="199" width="262.5" height="22"/>
+                                        <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.83137254901960778" green="0.98431372549019602" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
+                                    <constraint firstItem="PXx-O9-wxy" firstAttribute="centerY" secondItem="VwJ-F0-K9K" secondAttribute="centerY" id="6Mz-6n-mxT"/>
                                     <constraint firstItem="oHb-tU-Dtl" firstAttribute="leading" secondItem="VwJ-F0-K9K" secondAttribute="leading" id="FQM-uj-awR"/>
                                     <constraint firstItem="CIW-nL-bdq" firstAttribute="top" secondItem="oHb-tU-Dtl" secondAttribute="bottom" id="OGB-3M-5Fw"/>
+                                    <constraint firstAttribute="trailing" secondItem="PXx-O9-wxy" secondAttribute="trailing" constant="15" id="OOS-zx-4JN"/>
                                     <constraint firstItem="CIW-nL-bdq" firstAttribute="leading" secondItem="VwJ-F0-K9K" secondAttribute="leading" id="PbA-OU-mX0"/>
+                                    <constraint firstItem="PXx-O9-wxy" firstAttribute="leading" secondItem="VwJ-F0-K9K" secondAttribute="leading" constant="15" id="QCF-oC-muC"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="650" id="YhJ-T2-vx0"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="bkc-4J-Oh2"/>
                                     <constraint firstAttribute="trailing" secondItem="oHb-tU-Dtl" secondAttribute="trailing" id="dAG-F1-wnT"/>
@@ -72,6 +81,7 @@
                     <connections>
                         <outlet property="gameName" destination="rbh-S6-zru" id="x6A-EW-cVh"/>
                         <outlet property="scoresTable" destination="CIW-nL-bdq" id="XL0-OD-wii"/>
+                        <outlet property="singleLable" destination="PXx-O9-wxy" id="b3A-m4-oEO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QMn-X9-0R7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

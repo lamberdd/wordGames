@@ -48,6 +48,7 @@ class ScoresTable: UITableView, UITableViewDataSource {
         let model = data[indexPath.row]
         cell.textLabel?.text = model.name
         cell.detailTextLabel?.text = String(model.score)
+        cell.selectionStyle = .none
         if data.count > 2 && indexPath.row % 2 == 1 {
             cell.backgroundColor = Constants.colors.superHighlightGray
         }
