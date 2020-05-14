@@ -8,8 +8,14 @@
 /* Class = "UIBarButtonItem"; title = "Настройки"; ObjectID = "RGF-bU-H6a"; */
 "RGF-bU-H6a.title" = "Настройки";
 
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "T3C-Id-WCb"; */
+"T3C-Id-WCb.normalTitle" = "Button";
+
 /* Class = "UILabel"; text = "Страны"; ObjectID = "X3t-S7-dmb"; */
 "X3t-S7-dmb.text" = "Страны";
+
+/* Class = "UILabel"; text = "Химические элементы"; ObjectID = "YCR-aJ-ZcP"; */
+"YCR-aJ-ZcP.text" = "Химические элементы";
 
 /* Class = "UINavigationItem"; title = "Выберите игру"; ObjectID = "j2i-WR-zu7"; */
 "j2i-WR-zu7.title" = "Выберите игру";

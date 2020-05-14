@@ -1,0 +1,21 @@
+
+/* Class = "UIBarButtonItem"; title = "Закрыть"; ObjectID = "OpA-de-RJ4"; */
+"OpA-de-RJ4.title" = "Закрыть";
+
+/* Class = "UILabel"; text = "Подсказки над клавиатурой:"; ObjectID = "V9q-U1-h2s"; */
+"V9q-U1-h2s.text" = "Подсказки над клавиатурой:";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "WZM-Vf-ktd"; */
+"WZM-Vf-ktd.text" = "3";
+
+/* Class = "UILabel"; text = "Количество подсказок:"; ObjectID = "ag7-7j-R76"; */
+"ag7-7j-R76.text" = "Количество подсказок:";
+
+/* Class = "UIButton"; normalTitle = "Очистить резултаты"; ObjectID = "hvM-8m-8w6"; */
+"hvM-8m-8w6.normalTitle" = "Очистить резултаты";
+
+/* Class = "UILabel"; text = "Время ответа:"; ObjectID = "jME-4I-ghk"; */
+"jME-4I-ghk.text" = "Время ответа:";
+
+/* Class = "UILabel"; text = "0:59"; ObjectID = "uW2-vb-kTk"; */
+"uW2-vb-kTk.text" = "0:59";

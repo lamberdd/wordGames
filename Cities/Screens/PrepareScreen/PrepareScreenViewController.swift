@@ -32,7 +32,7 @@ class PrepareScreenViewController: UIViewController, UITableViewDelegate, UITabl
     }
     @IBAction func start(_ sender: UIButton) {
         let gameCore = GameCore(type: gameType)
-        let helpCount = helpSwitch.isOn ? AppSettings.global.getHelpCount() : 0
+        let helpCount = helpSwitch.isOn ? AppSettings.global.gameHints : 0
         //TODO: Continue Game Coordinator
         let gameSettings = GameInitialSettings(playerNames: self.getPlayers(), gameCore: gameCore, hintsCount: helpCount, timeGame: timeGameSwitch.isOn)
         let gameCoordinator = GameCoordinator(prepareViewController: self, gameSettings: gameSettings)

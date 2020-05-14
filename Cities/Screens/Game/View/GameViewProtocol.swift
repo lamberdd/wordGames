@@ -28,5 +28,6 @@ protocol GameViewProtocol: class {
     func setTextField(word: String)
     func setBackgroundImage(_ image: UIImage)
     func setChangeLetterTitle(_ title: String)
+    func setTextFieldAutocorrect(_ enable: Bool)
     var changeLetterButtonVisible: Bool { get set }
 }

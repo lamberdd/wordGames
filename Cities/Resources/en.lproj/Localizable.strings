@@ -9,6 +9,11 @@
 //MARK: General
 "cancel" = "Cancel";
 "continue" = "Continue";
+"Ok" = "Ok";
+
+//MARK: Settings
+"Settings" = "Settings";
+"scores_cleared" = "Scores cleared";
 
 //MARK: Prepare screen
 "player" = "Player";

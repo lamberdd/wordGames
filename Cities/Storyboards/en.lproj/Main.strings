@@ -14,5 +14,8 @@
 /* Class = "UILabel"; text = "Страны"; ObjectID = "X3t-S7-dmb"; */
 "X3t-S7-dmb.text" = "Countries";
 
+/* Class = "UILabel"; text = "Химические элементы"; ObjectID = "YCR-aJ-ZcP"; */
+"YCR-aJ-ZcP.text" = "Chemical elements";
+
 /* Class = "UIButton"; normalTitle = "Лучшие игроки"; ObjectID = "mlg-5P-8m3"; */
 "mlg-5P-8m3.normalTitle" = "Best scores";

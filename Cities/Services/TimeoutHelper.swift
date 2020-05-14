@@ -12,6 +12,7 @@ class TimeoutHelper {
     
     private let timeout: Int
     private var timeLeft: Int
+    private let timeStringHelper = TimeStringHelper()
     
     init(seconds: Int) {
         self.timeout = seconds
@@ -33,20 +34,6 @@ class TimeoutHelper {
     }
     
     var userString: String {
-        if timeLeft > 59 {
-            let minutes = timeLeft/60
-            let seconds = timeLeft - (minutes*60)
-            return "\(minutes):\(doubleSeconds(seconds))"
-        } else {
-            return "0:\(doubleSeconds(timeLeft))"
-        }
-    }
-    
-    private func doubleSeconds(_ seconds: Int) -> String {
-        if seconds > 9 && seconds > 0 {
-            return String(seconds)
-        } else {
-            return "0\(seconds)"
-        }
+        timeStringHelper.toUserString(seconds: timeLeft)
     }
 }

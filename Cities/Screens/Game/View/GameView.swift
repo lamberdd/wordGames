@@ -104,6 +104,10 @@ class GameView: UIViewController, GameViewProtocol {
         textField.text = lastLetter
     }
     
+    func setTextFieldAutocorrect(_ enable: Bool) {
+        textField.autocorrectionType = enable ? .yes : .no
+    }
+    
     func setChangeLetterTitle(_ title: String) {
         changeLetterButton.setTitle(title, for: .normal)
     }

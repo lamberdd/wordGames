@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A044DAF246DB727005A7CE4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A044DB1246DB727005A7CE4 /* Settings.storyboard */; };
 		9A16D3AF242605E600D84E9A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16D3AE242605E600D84E9A /* UILabel.swift */; };
 		9A16D3B52426394400D84E9A /* names_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3B32426394400D84E9A /* names_en.json */; };
 		9A16D3B62426394400D84E9A /* names_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3B42426394400D84E9A /* names_ru.json */; };
 		9A16D3BB2426506700D84E9A /* Confirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3BD2426506700D84E9A /* Confirm.storyboard */; };
 		9A3C8FFF242154CF00A0320B /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */; };
 		9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C90002421617C00A0320B /* BlackoutViewController.swift */; };
+		9A7B6A8E246DC3F700925A88 /* TimeStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */; };
 		9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0C242BE15900F641DA /* chemElems_ru.json */; };
 		9A7F2F0F242BE25500F641DA /* chemElems_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0E242BE25500F641DA /* chemElems_en.json */; };
+		9A83CB47246C7981003454FE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A83CB46246C7981003454FE /* SettingsView.swift */; };
 		9ADBD9F2244F8F71008CE8D7 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */; };
 		9ADBD9F4244F9265008CE8D7 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ADBD9F3244F9265008CE8D7 /* AlertViewController.swift */; };
 		9AF9FA9C24479ACB00EC991B /* TimeoutHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF9FA9B24479ACB00EC991B /* TimeoutHelper.swift */; };
@@ -92,18 +95,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A044DB0246DB727005A7CE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		9A044DB3246DB72F005A7CE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Settings.strings; sourceTree = "<group>"; };
 		9A16D3AE242605E600D84E9A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		9A16D3B32426394400D84E9A /* names_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = names_en.json; sourceTree = "<group>"; };
 		9A16D3B42426394400D84E9A /* names_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = names_ru.json; sourceTree = "<group>"; };
-		9A16D3B824264B3000D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		9A16D3BA24264EE200D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Game.strings; sourceTree = "<group>"; };
 		9A16D3BC2426506700D84E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Confirm.storyboard; sourceTree = "<group>"; };
 		9A16D3BF2426506E00D84E9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Confirm.strings; sourceTree = "<group>"; };
 		9A16D3C12426507000D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Confirm.strings; sourceTree = "<group>"; };
 		9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmViewController.swift; path = Confirm/ConfirmViewController.swift; sourceTree = "<group>"; };
 		9A3C90002421617C00A0320B /* BlackoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewController.swift; sourceTree = "<group>"; };
+		9A7B6A8C246DBC7F00925A88 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStringHelper.swift; sourceTree = "<group>"; };
+		9A7B6A90246DC5F500925A88 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Settings.strings; sourceTree = "<group>"; };
 		9A7F2F0C242BE15900F641DA /* chemElems_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chemElems_ru.json; sourceTree = "<group>"; };
 		9A7F2F0E242BE25500F641DA /* chemElems_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chemElems_en.json; sourceTree = "<group>"; };
+		9A83CB46246C7981003454FE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		9ADBD9F3244F9265008CE8D7 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		9AF9FA9B24479ACB00EC991B /* TimeoutHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeoutHelper.swift; sourceTree = "<group>"; };
@@ -220,6 +228,22 @@
 			path = ChemElems;
 			sourceTree = "<group>";
 		};
+		9A83CB44246C7961003454FE /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				9A83CB45246C7967003454FE /* View */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		9A83CB45246C7967003454FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A83CB46246C7981003454FE /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		FB02C00B2316FF9400FAD411 /* notificationView */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +267,7 @@
 			children = (
 				FB25B1D023DA1DA500ECB558 /* Translater.swift */,
 				9AF9FA9B24479ACB00EC991B /* TimeoutHelper.swift */,
+				9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -311,6 +336,7 @@
 				FBCD4A1323FB26400019D62A /* GameBestScores.storyboard */,
 				9A16D3BD2426506700D84E9A /* Confirm.storyboard */,
 				9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */,
+				9A044DB1246DB727005A7CE4 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -318,6 +344,7 @@
 		FB3121F322BFB402002C8342 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9A83CB44246C7961003454FE /* Settings */,
 				FBABA01323FC583300E61B0A /* BestScores */,
 				FBF8862123E0B7FC00931867 /* Main */,
 				FBC7A89723DA134400496DEC /* AlreadyUsedWords */,
@@ -689,6 +716,7 @@
 				FBD0F78F23C658F300876394 /* NotExist.storyboard in Resources */,
 				FBD0F78823C6581E00876394 /* Game.storyboard in Resources */,
 				FBD0F79F23C65EBD00876394 /* Localizable.strings in Resources */,
+				9A044DAF246DB727005A7CE4 /* Settings.storyboard in Resources */,
 				FB0414CA23EB535D0025F8FB /* country_ru.json in Resources */,
 				FBABA00923FC4D7A00E61B0A /* ScoreCell.xib in Resources */,
 				FBD0F79623C6599000876394 /* Scores.storyboard in Resources */,
@@ -736,10 +764,12 @@
 				FB4FE45C22C15628001CB8BE /* GameController.swift in Sources */,
 				FBABA01223FC567700E61B0A /* ViewControllerGameBestScore.swift in Sources */,
 				FB25B1D623DA29C800ECB558 /* GameInitialSettings.swift in Sources */,
+				9A7B6A8E246DC3F700925A88 /* TimeStringHelper.swift in Sources */,
 				FB8D064D2395A05600D182C5 /* UIBarButtonItem.swift in Sources */,
 				9A3C8FFF242154CF00A0320B /* ConfirmViewController.swift in Sources */,
 				FBF8862823E0BF6300931867 /* MainScreenPresenter.swift in Sources */,
 				FBDC07AF23C79A0E00B12E1D /* WordsStackView.swift in Sources */,
+				9A83CB47246C7981003454FE /* SettingsView.swift in Sources */,
 				9A16D3AF242605E600D84E9A /* UILabel.swift in Sources */,
 				FBB30F5523EDD2EE0070599F /* GameImage.swift in Sources */,
 				FB3121EF22BFAE35002C8342 /* Constants.swift in Sources */,
@@ -796,6 +826,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		9A044DB1246DB727005A7CE4 /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A044DB0246DB727005A7CE4 /* Base */,
+				9A044DB3246DB72F005A7CE4 /* en */,
+				9A7B6A90246DC5F500925A88 /* ru */,
+			);
+			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
 		9A16D3BD2426506700D84E9A /* Confirm.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -860,7 +900,7 @@
 			children = (
 				FBE9375722BD6EAE00E85B13 /* Base */,
 				FBD0F77E23C6488600876394 /* en */,
-				9A16D3B824264B3000D84E9A /* ru */,
+				9A7B6A8C246DBC7F00925A88 /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

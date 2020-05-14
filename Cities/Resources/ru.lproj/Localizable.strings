@@ -9,6 +9,11 @@
 //MARK: General
 "cancel" = "Отмена";
 "continue" = "Продолжить";
+"Ok" = "Ок";
+
+//MARK: Settings
+"Settings" = "Настройки";
+"scores_cleared" = "Результаты очищены";
 
 //MARK: Prepare screen
 "player" = "Игрок";

@@ -22,7 +22,7 @@ class GameController {
     private let players: Players
     private var usedWords: [UsedWord]
     
-    private let timeout = TimeoutHelper(seconds: 59)
+    private let timeout: TimeoutHelper
     private var timer: Timer? = nil
     
     deinit {
@@ -36,6 +36,7 @@ class GameController {
         self.coordinator = coordinator
         
         self.usedWords = []
+        self.timeout = TimeoutHelper(seconds: AppSettings.global.answerTime)
         
         let randomWord = gameCore.getRandom()
         let lastLetter = gameCore.lastLetter().uppercased()
@@ -46,6 +47,7 @@ class GameController {
         view.setWord(randomWord)
         view.setLastLetter(lastLetter)
         view.setCurrentPlayer(name: self.players.current, score: self.players.scoreForCurrent())
+        view.setTextFieldAutocorrect(AppSettings.global.keyboardHints)
         
         if gameSettings.hintsCount == 0 {
             view.hideHelps()

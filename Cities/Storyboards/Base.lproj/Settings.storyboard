@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="98X-sd-wwM">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View-->
+        <scene sceneID="glD-8C-zhg">
+            <objects>
+                <viewController id="6Z1-je-NIn" customClass="SettingsView" customModule="Cities" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4jn-QF-f00">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Подсказки над клавиатурой:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V9q-U1-h2s">
+                                <rect key="frame" x="15" y="45" width="189" height="18.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <color key="textColor" white="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MB1-rH-f6w">
+                                <rect key="frame" x="311" y="39" width="51" height="31"/>
+                                <color key="onTintColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <action selector="kyeboardHintsSwitchOnChange:" destination="6Z1-je-NIn" eventType="valueChanged" id="9Eq-g1-0kV"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Количество подсказок:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ag7-7j-R76">
+                                <rect key="frame" x="15" y="108.5" width="155" height="18.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <color key="textColor" white="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="3" minimumValue="1" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="fYw-M9-EK2">
+                                <rect key="frame" x="266" y="102" width="94" height="32"/>
+                                <connections>
+                                    <action selector="gameHintsSteppChange:" destination="6Z1-je-NIn" eventType="valueChanged" id="lH7-y3-hO6"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZM-Vf-ktd">
+                                <rect key="frame" x="185" y="108.5" width="8.5" height="19"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
+                                <color key="textColor" white="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvM-8m-8w6">
+                                <rect key="frame" x="15" y="236.5" width="345" height="31"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <state key="normal" title="Очистить резултаты">
+                                    <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearScores:" destination="6Z1-je-NIn" eventType="touchUpInside" id="Zhx-A5-jgF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время ответа:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jME-4I-ghk">
+                                <rect key="frame" x="15" y="172" width="95" height="19"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="16"/>
+                                <color key="textColor" white="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:59" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uW2-vb-kTk">
+                                <rect key="frame" x="125" y="171.5" width="29.5" height="20"/>
+                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
+                                <color key="textColor" white="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="4" minimumValue="1" maximumValue="7" translatesAutoresizingMaskIntoConstraints="NO" id="NcH-zk-omg">
+                                <rect key="frame" x="266" y="165.5" width="94" height="32"/>
+                                <connections>
+                                    <action selector="answerTimeStepChanged:" destination="6Z1-je-NIn" eventType="valueChanged" id="hWg-ML-s77"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.98431372549999996" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lym-gb-5rd" firstAttribute="trailing" secondItem="MB1-rH-f6w" secondAttribute="trailing" constant="15" id="1Dl-JO-3Uf"/>
+                            <constraint firstItem="hvM-8m-8w6" firstAttribute="leading" secondItem="Lym-gb-5rd" secondAttribute="leading" constant="15" id="2xM-Uc-RL2"/>
+                            <constraint firstItem="Lym-gb-5rd" firstAttribute="trailing" secondItem="fYw-M9-EK2" secondAttribute="trailing" constant="15" id="5Yd-E5-Bnr"/>
+                            <constraint firstItem="ag7-7j-R76" firstAttribute="top" secondItem="V9q-U1-h2s" secondAttribute="bottom" constant="45" id="9JI-Uf-5pM"/>
+                            <constraint firstItem="MB1-rH-f6w" firstAttribute="centerY" secondItem="V9q-U1-h2s" secondAttribute="centerY" id="ATr-j9-TJR"/>
+                            <constraint firstItem="NcH-zk-omg" firstAttribute="centerY" secondItem="jME-4I-ghk" secondAttribute="centerY" id="DeI-TD-6px"/>
+                            <constraint firstItem="WZM-Vf-ktd" firstAttribute="leading" secondItem="ag7-7j-R76" secondAttribute="trailing" constant="15" id="Hkm-YF-yk5"/>
+                            <constraint firstItem="WZM-Vf-ktd" firstAttribute="centerY" secondItem="ag7-7j-R76" secondAttribute="centerY" id="KqO-ex-PWC"/>
+                            <constraint firstItem="Lym-gb-5rd" firstAttribute="trailing" secondItem="hvM-8m-8w6" secondAttribute="trailing" constant="15" id="OLt-0r-KwO"/>
+                            <constraint firstItem="ag7-7j-R76" firstAttribute="leading" secondItem="Lym-gb-5rd" secondAttribute="leading" constant="15" id="SBl-sI-Qip"/>
+                            <constraint firstItem="uW2-vb-kTk" firstAttribute="centerY" secondItem="jME-4I-ghk" secondAttribute="centerY" id="WMh-p1-oLd"/>
+                            <constraint firstItem="jME-4I-ghk" firstAttribute="leading" secondItem="Lym-gb-5rd" secondAttribute="leading" constant="15" id="Z67-3o-kQK"/>
+                            <constraint firstItem="fYw-M9-EK2" firstAttribute="centerY" secondItem="ag7-7j-R76" secondAttribute="centerY" id="Zvg-s4-dsC"/>
+                            <constraint firstItem="V9q-U1-h2s" firstAttribute="leading" secondItem="Lym-gb-5rd" secondAttribute="leading" constant="15" id="awE-Ii-Z9x"/>
+                            <constraint firstItem="Lym-gb-5rd" firstAttribute="trailing" secondItem="NcH-zk-omg" secondAttribute="trailing" constant="15" id="dGM-rr-RY2"/>
+                            <constraint firstItem="hvM-8m-8w6" firstAttribute="top" secondItem="uW2-vb-kTk" secondAttribute="bottom" constant="45" id="gKE-zb-bgn"/>
+                            <constraint firstItem="jME-4I-ghk" firstAttribute="top" secondItem="ag7-7j-R76" secondAttribute="bottom" constant="45" id="iXy-qA-G7k"/>
+                            <constraint firstItem="V9q-U1-h2s" firstAttribute="top" secondItem="Lym-gb-5rd" secondAttribute="top" constant="45" id="ohe-hp-JHp"/>
+                            <constraint firstItem="uW2-vb-kTk" firstAttribute="leading" secondItem="jME-4I-ghk" secondAttribute="trailing" constant="15" id="vCh-dz-fyK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lym-gb-5rd"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="8Nb-Pf-65i">
+                        <barButtonItem key="leftBarButtonItem" title="Закрыть" image="bar-close" style="plain" id="OpA-de-RJ4">
+                            <inset key="largeContentSizeImageInsets" minX="0.0" minY="100" maxX="0.0" maxY="0.0"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onClose:" destination="6Z1-je-NIn" id="XNK-6C-8Ns"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="answerTimeLabel" destination="uW2-vb-kTk" id="dKV-HQ-t3D"/>
+                        <outlet property="answerTimeStepper" destination="NcH-zk-omg" id="tHK-jd-Mkj"/>
+                        <outlet property="gameHintsLabel" destination="WZM-Vf-ktd" id="7rr-Ev-91c"/>
+                        <outlet property="gameHintsStepper" destination="fYw-M9-EK2" id="8Ph-f4-vRw"/>
+                        <outlet property="keyboardHintsSwitch" destination="MB1-rH-f6w" id="FDr-s8-RDQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s0F-1t-Jzo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959.20000000000005" y="170.46476761619192"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="E9B-m5-qwK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="98X-sd-wwM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="sBZ-hF-fOg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.0" green="0.58823529409999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Z1-je-NIn" kind="relationship" relationship="rootViewController" id="LcX-dp-LOl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JJH-ff-y0a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="170.46476761619192"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bar-close" width="24" height="24"/>
+    </resources>
+</document>
