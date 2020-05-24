@@ -2,6 +2,9 @@
 /* Class = "UIButton"; normalTitle = "Начать"; ObjectID = "1Bh-YR-hlS"; */
 "1Bh-YR-hlS.normalTitle" = "Start";
 
+/* Class = "UILabel"; text = "Игра на время:"; ObjectID = "2ER-gS-STq"; */
+"2ER-gS-STq.text" = "Time game:";
+
 /* Class = "UILabel"; text = "Подсказки:"; ObjectID = "8ff-F2-HwR"; */
 "8ff-F2-HwR.text" = "Hints:";
 

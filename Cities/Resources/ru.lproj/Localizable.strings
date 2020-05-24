@@ -35,6 +35,14 @@
 "names_not_exist" = "Указанное Вами имя не существует :(";
 "chemElems_not_exist" = "Указанный Вами химический элемент не существует :(";
 "you_may_add_it" = "Но если это не так, то Вы можете добавить";
+"cities_already_name" = "Такой город уже был назван";
+"countries_already_named" = "Такая страна уже была названа";
+"names_already_named" = "Такое имя уже было названо";
+"chemElems_already_named" = "Такой элемент уже был назван";
+"time_is_up" = "Время истекло";
+"left_the_game" = "покинул(а) игру";
+"game_over" = "Игра закончена";
+"answer_timed_out" = "Время ответа истекло";
 
 //MARK: Best score screen
 "no_game_scores" = "Для этой игры нет результатов, Вы в неё еще не играли";

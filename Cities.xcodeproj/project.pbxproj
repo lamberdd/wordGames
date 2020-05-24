@@ -12,6 +12,7 @@
 		9A16D3B52426394400D84E9A /* names_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3B32426394400D84E9A /* names_en.json */; };
 		9A16D3B62426394400D84E9A /* names_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3B42426394400D84E9A /* names_ru.json */; };
 		9A16D3BB2426506700D84E9A /* Confirm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3BD2426506700D84E9A /* Confirm.storyboard */; };
+		9A28246E247AFDA20078502B /* AlreadyUsedWords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A282470247AFDA20078502B /* AlreadyUsedWords.storyboard */; };
 		9A3C8FFF242154CF00A0320B /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */; };
 		9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C90002421617C00A0320B /* BlackoutViewController.swift */; };
 		9A7B6A8E246DC3F700925A88 /* TimeStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */; };
@@ -56,7 +57,6 @@
 		FBB22D7623FF066D00F4903E /* ConstraintConfiguratorBestScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB22D7523FF066D00F4903E /* ConstraintConfiguratorBestScores.swift */; };
 		FBB30F5523EDD2EE0070599F /* GameImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB30F5423EDD2EE0070599F /* GameImage.swift */; };
 		FBC6E0472389655F002A87FD /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC6E0462389655F002A87FD /* ScoresViewController.swift */; };
-		FBC7A89923DA13A500496DEC /* AlreadyUsedWords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBC7A89823DA13A500496DEC /* AlreadyUsedWords.storyboard */; };
 		FBC7A89B23DA171900496DEC /* AlreadyUsedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC7A89A23DA171900496DEC /* AlreadyUsedWordsViewController.swift */; };
 		FBC7A89E23DA1C0000496DEC /* UsedWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC7A89D23DA1C0000496DEC /* UsedWords.swift */; };
 		FBCD4A1423FB26400019D62A /* GameBestScores.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCD4A1323FB26400019D62A /* GameBestScores.storyboard */; };
@@ -104,6 +104,10 @@
 		9A16D3BC2426506700D84E9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Confirm.storyboard; sourceTree = "<group>"; };
 		9A16D3BF2426506E00D84E9A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Confirm.strings; sourceTree = "<group>"; };
 		9A16D3C12426507000D84E9A /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Confirm.strings; sourceTree = "<group>"; };
+		9A28246D247AF53C0078502B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Prepare.strings; sourceTree = "<group>"; };
+		9A28246F247AFDA20078502B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AlreadyUsedWords.storyboard; sourceTree = "<group>"; };
+		9A282472247AFDB00078502B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/AlreadyUsedWords.strings; sourceTree = "<group>"; };
+		9A282474247AFDB20078502B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/AlreadyUsedWords.strings; sourceTree = "<group>"; };
 		9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmViewController.swift; path = Confirm/ConfirmViewController.swift; sourceTree = "<group>"; };
 		9A3C90002421617C00A0320B /* BlackoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewController.swift; sourceTree = "<group>"; };
 		9A7B6A8C246DBC7F00925A88 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -150,7 +154,6 @@
 		FBB22D7523FF066D00F4903E /* ConstraintConfiguratorBestScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintConfiguratorBestScores.swift; sourceTree = "<group>"; };
 		FBB30F5423EDD2EE0070599F /* GameImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameImage.swift; sourceTree = "<group>"; };
 		FBC6E0462389655F002A87FD /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
-		FBC7A89823DA13A500496DEC /* AlreadyUsedWords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AlreadyUsedWords.storyboard; sourceTree = "<group>"; };
 		FBC7A89A23DA171900496DEC /* AlreadyUsedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlreadyUsedWordsViewController.swift; sourceTree = "<group>"; };
 		FBC7A89D23DA1C0000496DEC /* UsedWords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsedWords.swift; sourceTree = "<group>"; };
 		FBCD4A1323FB26400019D62A /* GameBestScores.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GameBestScores.storyboard; sourceTree = "<group>"; };
@@ -159,7 +162,6 @@
 		FBD0F77F23C648D700876394 /* WordFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFiles.swift; sourceTree = "<group>"; };
 		FBD0F78223C657DF00876394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Prepare.storyboard; sourceTree = "<group>"; };
 		FBD0F78523C657E800876394 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Prepare.strings; sourceTree = "<group>"; };
-		FBD0F78723C657EB00876394 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Prepare.strings; sourceTree = "<group>"; };
 		FBD0F78923C6581E00876394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Game.storyboard; sourceTree = "<group>"; };
 		FBD0F78C23C6582200876394 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Game.strings; sourceTree = "<group>"; };
 		FBD0F79023C658F300876394 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/NotExist.storyboard; sourceTree = "<group>"; };
@@ -332,7 +334,7 @@
 				FBD0F78A23C6581E00876394 /* Game.storyboard */,
 				FBD0F79123C658F300876394 /* NotExist.storyboard */,
 				FBD0F79823C6599000876394 /* Scores.storyboard */,
-				FBC7A89823DA13A500496DEC /* AlreadyUsedWords.storyboard */,
+				9A282470247AFDA20078502B /* AlreadyUsedWords.storyboard */,
 				FBCD4A1323FB26400019D62A /* GameBestScores.storyboard */,
 				9A16D3BD2426506700D84E9A /* Confirm.storyboard */,
 				9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */,
@@ -727,7 +729,7 @@
 				9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */,
 				FBCD4A1423FB26400019D62A /* GameBestScores.storyboard in Resources */,
 				FBE9375D22BD6EB000E85B13 /* Assets.xcassets in Resources */,
-				FBC7A89923DA13A500496DEC /* AlreadyUsedWords.storyboard in Resources */,
+				9A28246E247AFDA20078502B /* AlreadyUsedWords.storyboard in Resources */,
 				9A7F2F0F242BE25500F641DA /* chemElems_en.json in Resources */,
 				FBE9375822BD6EAE00E85B13 /* Main.storyboard in Resources */,
 				FBD0F78123C657DF00876394 /* Prepare.storyboard in Resources */,
@@ -846,12 +848,22 @@
 			name = Confirm.storyboard;
 			sourceTree = "<group>";
 		};
+		9A282470247AFDA20078502B /* AlreadyUsedWords.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A28246F247AFDA20078502B /* Base */,
+				9A282472247AFDB00078502B /* en */,
+				9A282474247AFDB20078502B /* ru */,
+			);
+			name = AlreadyUsedWords.storyboard;
+			sourceTree = "<group>";
+		};
 		FBD0F78323C657DF00876394 /* Prepare.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FBD0F78223C657DF00876394 /* Base */,
 				FBD0F78523C657E800876394 /* en */,
-				FBD0F78723C657EB00876394 /* ru */,
+				9A28246D247AF53C0078502B /* ru */,
 			);
 			name = Prepare.storyboard;
 			sourceTree = "<group>";

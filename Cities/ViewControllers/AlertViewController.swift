@@ -14,8 +14,13 @@ class AlertViewController: BlackoutViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var continueButton: UIButton!
     @IBAction func onContinue(_ sender: UIButton) {
         callback?()
+    }
+    
+    override func viewDidLoad() {
+        continueButton.setTitle(translate("continue"), for: .normal)
     }
     
     var continueCallback: (()->Void)? = nil

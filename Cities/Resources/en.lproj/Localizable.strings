@@ -35,6 +35,14 @@
 "names_not_exist" = "The firstname you specified does not exist :(";
 "chemElems_not_exist" = "The chemical element you specified does not exist :(";
 "you_may_add_it" = "But if it's not, then you can add it";
+"cities_already_name" = "This city has already been named";
+"countries_already_named" = "This country has already been named";
+"names_already_named" = "This name has already been named";
+"chemElems_already_named" = "This element has already been named";
+"time_is_up" = "Time is up.";
+"left_the_game" = "left the game";
+"game_over" = "Game over";
+"answer_timed_out" = "Answer timed out";
 
 //MARK: Best score screen
 "no_game_scores" = "There are no results for this game, you have not played it yet";

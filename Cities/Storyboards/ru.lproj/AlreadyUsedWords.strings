@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "Aht-Sx-Ut2"; */
+"Aht-Sx-Ut2.text" = "Title";
+
+/* Class = "UILabel"; text = "Вышедшие слова"; ObjectID = "G4f-oZ-GKP"; */
+"G4f-oZ-GKP.text" = "Вышедшие слова";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "UFC-wk-Iso"; */
+"UFC-wk-Iso.text" = "Detail";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "W8u-Ya-ZRx"; */
+"W8u-Ya-ZRx.normalTitle" = "Продолжить";

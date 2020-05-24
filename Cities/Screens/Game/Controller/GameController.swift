@@ -84,7 +84,7 @@ class GameController {
         view.leftPlayer(name: players.current)
         if players.count == 1 || players.existActivePlayers() == false {
             timer?.invalidate()
-            coordinator.showAlert(title: "Игра завершена", text: "Время ответа истекло") { [weak self] in
+            coordinator.showAlert(title: translate("game_over"), text: translate("answer_timed_out")) { [weak self] in
                 self?.finishGame()
             }
         } else {
@@ -104,7 +104,7 @@ class GameController {
             timer?.fire() // Обновляем таймер
             successAnswer()
         } else if status == .alreadyUsed {
-            view.animateAlreadyUsed()
+            view.animateAlreadyUsed(gameType: gameCore.type)
         } else if status == .notFound {
             view.shakeErrorTextField()
             coordinator.showNotFoundView(word: word, gameType: gameCore.type, after: 0.2) { [weak self] in

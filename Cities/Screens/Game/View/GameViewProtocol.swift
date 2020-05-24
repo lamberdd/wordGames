@@ -16,7 +16,7 @@ protocol GameViewProtocol: class {
     func setTitle(text: String, color: UIColor?)
     func animateSuccess()
     func leftPlayer(name: String)
-    func animateAlreadyUsed()
+    func animateAlreadyUsed(gameType: GameType)
     func shakeErrorTextField()
     func showLoaderIndicator()
     func hideLoaderIndicator()
