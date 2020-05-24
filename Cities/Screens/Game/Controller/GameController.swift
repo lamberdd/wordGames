@@ -89,6 +89,9 @@ class GameController {
             }
         } else {
             players.nextPlayer()
+            if players.getNumberActivePlayers() == 1 {
+                view.hideSkip()
+            }
             updateView(animateSuccess: false, updateWord: false)
         }
     }
@@ -118,7 +121,9 @@ class GameController {
     }
     
     func skip() {
+        players.timeLeft = timeout.time
         players.nextPlayer()
+        updateCurrentTimeoutIfNeeded()
         updateView(animateSuccess: false, updateWord: false)
     }
     
@@ -157,12 +162,14 @@ class GameController {
     
     private func successAnswer() {
         players.incrementCurrentScore()
+        players.timeLeft = nil
         let currentSuccessWord = gameCore.current()
         addUsedWord(for: players.current)
         // Multiplayer
         let isMultiplayer = players.isMultiplayer
         if isMultiplayer {
            players.nextPlayer()
+            updateCurrentTimeoutIfNeeded()
         } else { // Single player
            let lastLetter = gameCore.lastLetter()
            let _ = gameCore.generateWith(firstLetter: lastLetter)
@@ -227,6 +234,15 @@ class GameController {
             view.showHelps()
         }
         view.setHelpsCount(helpsCount)
+    }
+    
+    private func updateCurrentTimeoutIfNeeded() {
+        if let playerTimeLeft = players.timeLeft {
+            timeout.setCurrent(time: playerTimeLeft)
+        } else {
+            timeout.reset()
+        }
+        timer?.fire()
     }
     
     private var initialLastLetter: String? = nil

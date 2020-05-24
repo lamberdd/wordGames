@@ -29,6 +29,15 @@ class Players {
         }
     }
     
+    var timeLeft: Int? {
+        get {
+            return players[currentNumber].timeLeft
+        }
+        set {
+            players[currentNumber].timeLeft = newValue
+        }
+    }
+    
     init(players: [String], helpCount: Int = 0) {
         for playerName in players {
             let player = Player(name: playerName, score: 0, helps: helpCount)
@@ -70,6 +79,12 @@ class Players {
     
     func getPlayers() -> [Player] {
         return players
+    }
+    
+    func getNumberActivePlayers() -> Int {
+        var count = 0
+        players.forEach({ if !$0.left { count += 1 } })
+        return count
     }
     
     func totalScore() -> Int {

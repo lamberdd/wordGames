@@ -25,6 +25,10 @@ class TimeoutHelper {
         }
     }
     
+    func setCurrent(time: Int) {
+        timeLeft = time
+    }
+    
     func reset() {
         timeLeft = timeout
     }
