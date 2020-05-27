@@ -11,7 +11,7 @@ import GoogleMobileAds
 
 class FullScreenAd: NSObject, GADInterstitialDelegate {
     
-    let rootVC: UIViewController
+    weak var rootVC: UIViewController?
     let adId = "ca-app-pub-3940256099942544/4411468910"
     var interstitial: GADInterstitial?
     
@@ -25,6 +25,7 @@ class FullScreenAd: NSObject, GADInterstitialDelegate {
     }
     
     func show(onShow: (()->Void)?, onClose: (()->Void)?) {
+        guard let rootVC = rootVC else { return }
         showCallback = onShow
         closeCallback = onClose
         if interstitial?.isReady == true {
