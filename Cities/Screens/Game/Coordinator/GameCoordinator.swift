@@ -14,6 +14,7 @@ class GameCoordinator {
     private unowned let prepareVC: PrepareScreenViewController
     private let gameSettings: GameInitialSettings
     private weak var gameView: GameView? = nil
+    private var fullScreenAd: FullScreenAd? = nil
     
     deinit {
         print("Coordinator deinited")
@@ -30,6 +31,7 @@ class GameCoordinator {
         gameView?.viewDidLoaded = {
             self.gameView?.controller = GameController(view: self.gameView!, gameSettings: self.gameSettings, coordinator: self)
         }
+        fullScreenAd = FullScreenAd(rootViewController: gameView!)
         prepareVC.present(navigationController, animated: true, completion: nil)
     }
     
@@ -85,5 +87,9 @@ class GameCoordinator {
     
     func closeGameToPrepare() {
         gameView?.presentingViewController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func showAd(onShow: (()->Void)?, onClose: (()->Void)?) {
+        fullScreenAd?.show(onShow: onShow, onClose: onClose)
     }
 }

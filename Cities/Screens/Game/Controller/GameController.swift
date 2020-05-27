@@ -18,12 +18,14 @@ class GameController {
     unowned let view: GameViewProtocol
     unowned let gameCore: GameCore
     private let coordinator: GameCoordinator
+    private let adHelper: GameAdHelper
     
     private let players: Players
     private var usedWords: [UsedWord]
     
     private let timeout: TimeoutHelper
     private var timer: Timer? = nil
+    private var isPauseTimer = false
     
     deinit {
         print("GameController deinited")
@@ -35,6 +37,7 @@ class GameController {
         self.players = Players(players: gameSettings.playerNames, helpCount: gameSettings.hintsCount)
         self.coordinator = coordinator
         
+        self.adHelper = GameAdHelper(gameCoordinator: coordinator)
         self.usedWords = []
         self.timeout = TimeoutHelper(seconds: AppSettings.global.answerTime)
         
@@ -68,6 +71,7 @@ class GameController {
     
     private func setupTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] (t) in
+            if self?.isPauseTimer == true { return }
             self?.timeout.decrement()
             guard let timeLeft = self?.timeout.time, let timeoutUserString = self?.timeout.userString else { return }
             let color = timeLeft < 8 ? UIColor.systemRed : nil
@@ -118,6 +122,7 @@ class GameController {
         } else if status == .invalid {
             view.shakeErrorTextField()
         }
+        showAdIfNeeded()
     }
     
     func skip() {
@@ -259,5 +264,13 @@ class GameController {
         guard let from = fromLetter, let to = toLetter else { return }
         let newTitle = "\(from)→\(to)"
         view.setChangeLetterTitle(newTitle)
+    }
+    
+    private func showAdIfNeeded() {
+        adHelper.showIfNeeded(onShow: { [weak self] in
+            self?.isPauseTimer = true
+        }) { [weak self] in
+            self?.isPauseTimer = false
+        }
     }
 }
