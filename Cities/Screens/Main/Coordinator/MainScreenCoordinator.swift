@@ -12,11 +12,16 @@ import UIKit
 class MainScreenCoordinator {
     
     private let mainVC: MainScreenViewController
+    private var onUpdateScreen: (()->Void)? = nil
     
     init(viewController: MainScreenViewController) {
         self.mainVC = viewController
         
         viewController.presenter = MainScreenPresenter(view: viewController, coordinator: self)
+    }
+    
+    func setUpdateHandler(_ handler: @escaping ()->Void) {
+        onUpdateScreen = handler
     }
     
     func showBestScores(bestPlayers: [GameBestScoresModel]) {
@@ -37,9 +42,25 @@ class MainScreenCoordinator {
             setupPrepareScreen(segue.destination, gameType: .names)
         case "chemElems":
             setupPrepareScreen(segue.destination, gameType: .chemElems)
+        case "buyFull":
+            if let buyFullView = segue.destination as? BuyFullVersionView {
+                buyFullView.onClose = onUpdateScreen
+            }
         default:
             print("Game undefined. Select cities")
         }
+    }
+    
+    func prepareFirstnamesGame() {
+        mainVC.performSegue(withIdentifier: "names", sender: nil)
+    }
+    
+    func prepareChemElemsGame() {
+        mainVC.performSegue(withIdentifier: "chemElems", sender: nil)
+    }
+    
+    func openPurchaseScreen() {
+        mainVC.performSegue(withIdentifier: "buyFull", sender: nil)
     }
 
     private func setupPrepareScreen(_ viewController: UIViewController, gameType: GameType) {

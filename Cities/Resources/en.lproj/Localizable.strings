@@ -15,6 +15,11 @@
 "Settings" = "Settings";
 "scores_cleared" = "Scores cleared";
 
+//MARK: Full version screen
+"promocode" = "Promotional code";
+"enter_promo" = "Enter promotional code";
+"invalid_promo" = "Invalid promotional code";
+
 //MARK: Prepare screen
 "player" = "Player";
 

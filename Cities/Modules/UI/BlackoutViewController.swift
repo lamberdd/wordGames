@@ -22,7 +22,9 @@ class BlackoutViewController: UIViewController {
     
     override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
         UIView.animate(withDuration: animDuration, animations: {
-            self.view.backgroundColor = UIColor.clear
+            if self.presentedViewController == nil {
+                self.view.backgroundColor = UIColor.clear
+            }
         }) { (_) in
             super.dismiss(animated: flag, completion: completion)
         }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A00F30C247F05930065D286 /* BuyFullVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A00F30B247F05930065D286 /* BuyFullVersionView.swift */; };
 		9A044DAF246DB727005A7CE4 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A044DB1246DB727005A7CE4 /* Settings.storyboard */; };
 		9A16D3AF242605E600D84E9A /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A16D3AE242605E600D84E9A /* UILabel.swift */; };
 		9A16D3B52426394400D84E9A /* names_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A16D3B32426394400D84E9A /* names_en.json */; };
@@ -15,6 +16,11 @@
 		9A28246E247AFDA20078502B /* AlreadyUsedWords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A282470247AFDA20078502B /* AlreadyUsedWords.storyboard */; };
 		9A3C8FFF242154CF00A0320B /* ConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */; };
 		9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C90002421617C00A0320B /* BlackoutViewController.swift */; };
+		9A481D54248440F9007B13A6 /* BuyFullGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A481D56248440F9007B13A6 /* BuyFullGame.storyboard */; };
+		9A4A3E12248035C400005DAC /* ProtocolBuyFullVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E11248035C400005DAC /* ProtocolBuyFullVersionView.swift */; };
+		9A4A3E162480362100005DAC /* BuyFullVersionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E152480362100005DAC /* BuyFullVersionPresenter.swift */; };
+		9A4A3E18248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E17248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift */; };
+		9A4A3E1A24803C8B00005DAC /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E1924803C8B00005DAC /* IAPManager.swift */; };
 		9A591B57247D89E0006806CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A591B59247D89E0006806CB /* InfoPlist.strings */; };
 		9A7B6A8E246DC3F700925A88 /* TimeStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */; };
 		9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0C242BE15900F641DA /* chemElems_ru.json */; };
@@ -102,6 +108,7 @@
 /* Begin PBXFileReference section */
 		4D2CFF8EE8BFA9E3B2EC1C74 /* Pods-Cities.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cities.debug.xcconfig"; path = "Target Support Files/Pods-Cities/Pods-Cities.debug.xcconfig"; sourceTree = "<group>"; };
 		5A7F99D5A77BBF5570CBDFC2 /* Pods-CitiesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CitiesTests.debug.xcconfig"; path = "Target Support Files/Pods-CitiesTests/Pods-CitiesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9A00F30B247F05930065D286 /* BuyFullVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFullVersionView.swift; sourceTree = "<group>"; };
 		9A044DB0246DB727005A7CE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		9A044DB3246DB72F005A7CE4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Settings.strings; sourceTree = "<group>"; };
 		9A16D3AE242605E600D84E9A /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
@@ -117,6 +124,13 @@
 		9A282474247AFDB20078502B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/AlreadyUsedWords.strings; sourceTree = "<group>"; };
 		9A3C8FFE242154CF00A0320B /* ConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConfirmViewController.swift; path = Confirm/ConfirmViewController.swift; sourceTree = "<group>"; };
 		9A3C90002421617C00A0320B /* BlackoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackoutViewController.swift; sourceTree = "<group>"; };
+		9A481D55248440F9007B13A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BuyFullGame.storyboard; sourceTree = "<group>"; };
+		9A481D58248440FB007B13A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BuyFullGame.strings; sourceTree = "<group>"; };
+		9A481D5A248440FC007B13A6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/BuyFullGame.strings; sourceTree = "<group>"; };
+		9A4A3E11248035C400005DAC /* ProtocolBuyFullVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBuyFullVersionView.swift; sourceTree = "<group>"; };
+		9A4A3E152480362100005DAC /* BuyFullVersionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFullVersionPresenter.swift; sourceTree = "<group>"; };
+		9A4A3E17248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBuyFullVersionPresenter.swift; sourceTree = "<group>"; };
+		9A4A3E1924803C8B00005DAC /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		9A591B58247D89E0006806CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A591B5A247D89E2006806CB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A7B6A8C246DBC7F00925A88 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -249,6 +263,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9A00F307247F05310065D286 /* BuyFullVersion */ = {
+			isa = PBXGroup;
+			children = (
+				9A4A3E142480360C00005DAC /* Presenter */,
+				9A00F30A247F057F0065D286 /* View */,
+			);
+			path = BuyFullVersion;
+			sourceTree = "<group>";
+		};
+		9A00F30A247F057F0065D286 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A00F30B247F05930065D286 /* BuyFullVersionView.swift */,
+				9A4A3E11248035C400005DAC /* ProtocolBuyFullVersionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9A16D3B2242637B900D84E9A /* Names */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +288,15 @@
 				9A16D3B42426394400D84E9A /* names_ru.json */,
 			);
 			path = Names;
+			sourceTree = "<group>";
+		};
+		9A4A3E142480360C00005DAC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9A4A3E152480362100005DAC /* BuyFullVersionPresenter.swift */,
+				9A4A3E17248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		9A7F2F0B242BE13E00F641DA /* ChemElems */ = {
@@ -368,6 +409,7 @@
 				FBB30F5423EDD2EE0070599F /* GameImage.swift */,
 				FBD0F77F23C648D700876394 /* WordFiles.swift */,
 				9A8225D5247DA90D0027A4CA /* FullScreenAd.swift */,
+				9A4A3E1924803C8B00005DAC /* IAPManager.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -385,6 +427,7 @@
 				9A16D3BD2426506700D84E9A /* Confirm.storyboard */,
 				9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */,
 				9A044DB1246DB727005A7CE4 /* Settings.storyboard */,
+				9A481D56248440F9007B13A6 /* BuyFullGame.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -392,6 +435,7 @@
 		FB3121F322BFB402002C8342 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				9A00F307247F05310065D286 /* BuyFullVersion */,
 				9A83CB44246C7961003454FE /* Settings */,
 				FBABA01323FC583300E61B0A /* BestScores */,
 				FBF8862123E0B7FC00931867 /* Main */,
@@ -782,6 +826,7 @@
 				9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */,
 				FBCD4A1423FB26400019D62A /* GameBestScores.storyboard in Resources */,
 				FBE9375D22BD6EB000E85B13 /* Assets.xcassets in Resources */,
+				9A481D54248440F9007B13A6 /* BuyFullGame.storyboard in Resources */,
 				9A28246E247AFDA20078502B /* AlreadyUsedWords.storyboard in Resources */,
 				9A7F2F0F242BE25500F641DA /* chemElems_en.json in Resources */,
 				FBE9375822BD6EAE00E85B13 /* Main.storyboard in Resources */,
@@ -901,10 +946,13 @@
 				FBABA00C23FC4E7E00E61B0A /* ScoresTable.swift in Sources */,
 				9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */,
 				FB25B1D423DA285E00ECB558 /* GameCoordinator.swift in Sources */,
+				9A4A3E18248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift in Sources */,
 				FBE9375322BD6EAE00E85B13 /* AppDelegate.swift in Sources */,
 				FBC7A89B23DA171900496DEC /* AlreadyUsedWordsViewController.swift in Sources */,
 				FB53F299230337BF005B1378 /* ArrayHelper.swift in Sources */,
 				FBD0F78023C648D700876394 /* WordFiles.swift in Sources */,
+				9A4A3E162480362100005DAC /* BuyFullVersionPresenter.swift in Sources */,
+				9A00F30C247F05930065D286 /* BuyFullVersionView.swift in Sources */,
 				FBB22D7623FF066D00F4903E /* ConstraintConfiguratorBestScores.swift in Sources */,
 				FBC6E0472389655F002A87FD /* ScoresViewController.swift in Sources */,
 				FB6EA31B22C0029900A025BC /* GameCore.swift in Sources */,
@@ -916,6 +964,7 @@
 				FB4FE45822C14713001CB8BE /* Players.swift in Sources */,
 				FB086A5822C3F13700AE1133 /* CheckmarkView.swift in Sources */,
 				FB6EA31122BFE7C500A025BC /* CellWithTextField.swift in Sources */,
+				9A4A3E1A24803C8B00005DAC /* IAPManager.swift in Sources */,
 				FB6CF6F62329753700FE017A /* Notification.swift in Sources */,
 				FBFCE922232E9AF40042465F /* NotificationImage.swift in Sources */,
 				9A8225D9247DAEA70027A4CA /* GameAdHelper.swift in Sources */,
@@ -923,6 +972,7 @@
 				FBABA01523FC586300E61B0A /* ViewController.swift in Sources */,
 				9ADBD9F4244F9265008CE8D7 /* AlertViewController.swift in Sources */,
 				FBF8862C23E0BFDF00931867 /* MainScreenCoordinator.swift in Sources */,
+				9A4A3E12248035C400005DAC /* ProtocolBuyFullVersionView.swift in Sources */,
 				FBF8862A23E0BF8400931867 /* MainScreenViewProtocol.swift in Sources */,
 				FB02C00D2316FFB000FAD411 /* NotificationView.swift in Sources */,
 				FB49924E230C68D500559F5D /* AppSettings.swift in Sources */,
@@ -976,6 +1026,16 @@
 				9A282474247AFDB20078502B /* ru */,
 			);
 			name = AlreadyUsedWords.storyboard;
+			sourceTree = "<group>";
+		};
+		9A481D56248440F9007B13A6 /* BuyFullGame.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A481D55248440F9007B13A6 /* Base */,
+				9A481D58248440FB007B13A6 /* en */,
+				9A481D5A248440FC007B13A6 /* ru */,
+			);
+			name = BuyFullGame.storyboard;
 			sourceTree = "<group>";
 		};
 		9A591B59247D89E0006806CB /* InfoPlist.strings */ = {

@@ -15,6 +15,24 @@ class AppSettings {
     
     private init() {}
     
+    private let fullVersionStoreName = "fullVersion"
+    private let defaultFullVersionValue = 1
+    var isFullVersion: Bool {
+        get {
+            let value = defaults.integer(forKey: fullVersionStoreName)
+            if  value != 0 {
+                return (value == 2) ? true : false
+            } else {
+                defaults.set(defaultFullVersionValue, forKey: fullVersionStoreName)
+                return false
+            }
+        }
+        set {
+            let isFull = newValue ? 2 : 1
+            defaults.set(isFull, forKey: fullVersionStoreName)
+        }
+    }
+    
     private let scoreStorageName = "top5scores"
     private let maxScores = 5
     

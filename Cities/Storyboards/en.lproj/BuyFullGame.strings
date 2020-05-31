@@ -1,0 +1,21 @@
+
+/* Class = "UIButton"; normalTitle = "Ввести промокод"; ObjectID = "D0r-db-CqV"; */
+"D0r-db-CqV.normalTitle" = "Enter promotional code";
+
+/* Class = "UIButton"; normalTitle = "Восстановить покупки"; ObjectID = "KOU-kD-u41"; */
+"KOU-kD-u41.normalTitle" = "Restore purchases";
+
+/* Class = "UIButton"; normalTitle = "Приобрести  за 79.00р"; ObjectID = "NBL-GU-y7X"; */
+"NBL-GU-y7X.normalTitle" = "Buy for";
+
+/* Class = "UILabel"; text = "У вас приобретена полная версия. Удачной игры!"; ObjectID = "Oun-M7-q0C"; */
+"Oun-M7-q0C.text" = "You have purchased the full version. Good game!";
+
+/* Class = "UILabel"; text = "Полная версия игры"; ObjectID = "Vli-cJ-Hzo"; */
+"Vli-cJ-Hzo.text" = "Full Version";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "YaR-Iv-JFx"; */
+"YaR-Iv-JFx.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "В полной версии Вам будут доступны все игры и не будет отображаться реклама"; ObjectID = "oIy-WD-zAJ"; */
+"oIy-WD-zAJ.text" = "In the full version, all games will be available to you and ads will not be displayed";

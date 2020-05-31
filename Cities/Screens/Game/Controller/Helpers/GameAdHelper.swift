@@ -20,6 +20,8 @@ class GameAdHelper {
     }
     
     func showIfNeeded(onShow: (()->Void)?, onClose: (()->Void)?) {
+        if AppSettings.global.isFullVersion { return }
+        
         Timer.scheduledTimer(withTimeInterval: 1.6, repeats: false) { [weak self] (t) in
             self?.clicksCount += 1
             guard let clicksCount = self?.clicksCount, let numberClicksToShow = self?.numberClicksToShow else { return }

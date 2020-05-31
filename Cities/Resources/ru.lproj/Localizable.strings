@@ -15,6 +15,11 @@
 "Settings" = "Настройки";
 "scores_cleared" = "Результаты очищены";
 
+//MARK: Full version screen
+"promocode" = "Промокод";
+"enter_promo" = "Введите промокод";
+"invalid_promo" = "Некорректный промокод";
+
 //MARK: Prepare screen
 "player" = "Игрок";
 
