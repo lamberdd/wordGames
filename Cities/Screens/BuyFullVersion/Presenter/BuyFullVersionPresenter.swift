@@ -22,14 +22,22 @@ class BuyFullVersionPresenter: ProtocolBuyFullVersionPresenter {
     
     func checkPromo(_ promo: String) {
         if promo.count < 3 {
-            view?.showAlert(text: translate("invalid_promo"))
+            view?.showAlert(text: translate("invalidCode"))
             return
         }
         self.view?.showLoading()
-        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { (t) in
-            self.successPurchase()
+        let promoService = PromocodeService()
+        promoService.checkCode(code: promo) { (status) in
+            DispatchQueue.main.async {
+                self.view?.stopLoading()
+                switch status {
+                case .success:
+                    self.successPurchase()
+                default:
+                    self.view?.showAlert(text: translate(status.rawValue))
+                }
+            }
         }
-        print("Promocode: \(promo)")
     }
     
     func buy() {

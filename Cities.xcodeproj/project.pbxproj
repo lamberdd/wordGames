@@ -22,6 +22,7 @@
 		9A4A3E18248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E17248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift */; };
 		9A4A3E1A24803C8B00005DAC /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E1924803C8B00005DAC /* IAPManager.swift */; };
 		9A591B57247D89E0006806CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A591B59247D89E0006806CB /* InfoPlist.strings */; };
+		9A7229ED24858F4E006A67E6 /* PromocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7229EC24858F4E006A67E6 /* PromocodeService.swift */; };
 		9A7B6A8E246DC3F700925A88 /* TimeStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */; };
 		9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0C242BE15900F641DA /* chemElems_ru.json */; };
 		9A7F2F0F242BE25500F641DA /* chemElems_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0E242BE25500F641DA /* chemElems_en.json */; };
@@ -133,6 +134,7 @@
 		9A4A3E1924803C8B00005DAC /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		9A591B58247D89E0006806CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A591B5A247D89E2006806CB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A7229EC24858F4E006A67E6 /* PromocodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromocodeService.swift; sourceTree = "<group>"; };
 		9A7B6A8C246DBC7F00925A88 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStringHelper.swift; sourceTree = "<group>"; };
 		9A7B6A90246DC5F500925A88 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Settings.strings; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 				FB25B1D023DA1DA500ECB558 /* Translater.swift */,
 				9AF9FA9B24479ACB00EC991B /* TimeoutHelper.swift */,
 				9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */,
+				9A7229EC24858F4E006A67E6 /* PromocodeService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -923,6 +926,7 @@
 				FBF8862423E0B8BD00931867 /* MainScreenViewController.swift in Sources */,
 				FB3121F622BFB723002C8342 /* PrepareScreenViewController.swift in Sources */,
 				FB4FE45E22C1564D001CB8BE /* GameViewProtocol.swift in Sources */,
+				9A7229ED24858F4E006A67E6 /* PromocodeService.swift in Sources */,
 				FBF8862F23E0C06300931867 /* MainScreenService.swift in Sources */,
 				FB6DEA4222C297480014DA9F /* String.swift in Sources */,
 				FB9F265E232AC56600DCD3FD /* InteractiveNotification.swift in Sources */,

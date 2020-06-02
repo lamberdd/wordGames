@@ -18,7 +18,10 @@
 //MARK: Full version screen
 "promocode" = "Промокод";
 "enter_promo" = "Введите промокод";
-"invalid_promo" = "Некорректный промокод";
+"serverError" = "Соединение прервано. Попробуйте позже";
+"codeNotExist" = "Введенный Вами промокод не существует";
+"codeOver" = "Введенный Вами промокод больше недействителен";
+"invalidCode" = "Некорректный код";
 
 //MARK: Prepare screen
 "player" = "Игрок";

@@ -17,7 +17,7 @@ class MainScreenViewController: UIViewController, MainScreenViewProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        AppSettings.global.isFullVersion = false
+        AppSettings.global.isFullVersion = false //TODO: Убрать перед публикацией
         coordinator = MainScreenCoordinator(viewController: self)
     }
     
