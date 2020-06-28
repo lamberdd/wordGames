@@ -11,6 +11,9 @@ import Foundation
 protocol ProtocolBuyFullVersionView: class {
     func showLoading()
     func stopLoading()
+    func buttonLoading(_ show: Bool)
     func showSuccessPurchase()
+    func setPurchaseButtonTitle(_ title: String)
+    func showError()
     func showAlert(text: String)
 }

@@ -22,6 +22,10 @@
 "codeNotExist" = "The promotional code you entered does not exist";
 "codeOver" = "The promotional code you entered is no longer valid";
 "invalidCode" = "Invalid code";
+"get_for" = "Get for";
+"purchase_error" = "There was an error, try again later";
+"no_restore_purchases" = "You have not previously purchased the full version";
+"cannot_purchase" = "You cannot make purchases. Check your payment settings";
 
 //MARK: Prepare screen
 "player" = "Player";

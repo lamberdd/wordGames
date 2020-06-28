@@ -6,7 +6,7 @@
 "KOU-kD-u41.normalTitle" = "Восстановить покупки";
 
 /* Class = "UIButton"; normalTitle = "Приобрести  за 79.00р"; ObjectID = "NBL-GU-y7X"; */
-"NBL-GU-y7X.normalTitle" = "Приобрести  за";
+"NBL-GU-y7X.normalTitle" = "Приобрести";
 
 /* Class = "UILabel"; text = "У вас приобретена полная версия. Удачной игры!"; ObjectID = "Oun-M7-q0C"; */
 "Oun-M7-q0C.text" = "У вас приобретена полная версия. Приятной игры!";

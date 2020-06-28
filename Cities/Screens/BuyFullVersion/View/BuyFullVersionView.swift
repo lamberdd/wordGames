@@ -13,8 +13,12 @@ class BuyFullVersionView: BlackoutViewController, ProtocolBuyFullVersionView {
     var presenter: ProtocolBuyFullVersionPresenter!
     @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var successView: UIView!
+    @IBOutlet weak var errorView: UIView!
+    @IBOutlet weak var buttonLoader: UIActivityIndicatorView!
+    @IBOutlet weak var buyButton: UIButton!
     
     var onClose: (()->Void)? = nil
+    var purchaseText: String = ""
     
     @IBAction func close(_ sender: UIButton) {
         onClose?()
@@ -24,6 +28,7 @@ class BuyFullVersionView: BlackoutViewController, ProtocolBuyFullVersionView {
         presenter.restore()
     }
     @IBAction func buy(_ sender: UIButton) {
+        if buttonLoader.isAnimating { return } // Игнорируем нажатия, если отображается загрузка
         presenter.buy()
     }
     @IBAction func enterPromo(_ sender: UIButton) {
@@ -52,6 +57,27 @@ class BuyFullVersionView: BlackoutViewController, ProtocolBuyFullVersionView {
     
     func showSuccessPurchase() {
         successView.isHidden = false
+    }
+    
+    func showError() {
+        errorView.isHidden = false
+    }
+    
+    func buttonLoading(_ show: Bool) {
+        if show {
+            buyButton.setTitle("", for: .normal)
+            buttonLoader.startAnimating()
+        } else {
+            buyButton.setTitle(purchaseText, for: .normal)
+            buttonLoader.stopAnimating()
+        }
+    }
+    
+    func setPurchaseButtonTitle(_ title: String) {
+        purchaseText = title
+        if buttonLoader.isAnimating == false {
+            buyButton.setTitle(title, for: .normal)
+        }
     }
 
     
