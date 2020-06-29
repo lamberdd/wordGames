@@ -12,7 +12,7 @@ import GoogleMobileAds
 class FullScreenAd: NSObject, GADInterstitialDelegate {
     
     weak var rootVC: UIViewController?
-    let adId = "ca-app-pub-3940256099942544/4411468910"
+    let adId = "ca-app-pub-5266048593250332/8155305238"
     var interstitial: GADInterstitial?
     
     var showCallback: (()->Void)? = nil

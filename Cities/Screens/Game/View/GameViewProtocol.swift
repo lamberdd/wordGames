@@ -11,6 +11,7 @@ import UIKit
 
 protocol GameViewProtocol: class {
     func setCurrentPlayer(name: String, score: Int)
+    func updateScore(_ value: Int)
     func setWord(_ word: String)
     func setLastLetter(_ letter: String)
     func setTitle(text: String, color: UIColor?)

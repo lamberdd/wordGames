@@ -203,6 +203,7 @@ class GameController {
         let lastLetter = gameCore.lastLetter()
         
         if players.isMultiplayer { view.setCurrentPlayer(name: players.current, score: players.scoreForCurrent()) }
+        else { view.updateScore(players.scoreForCurrent()) }
         view.setLastLetter(lastLetter)
         if let changeLetter = gameCore.getChagedLastLetter() {
             saveReplaceableLastLetter(letterInfo: changeLetter)

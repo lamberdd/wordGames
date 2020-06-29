@@ -93,6 +93,10 @@ class GameView: UIViewController, GameViewProtocol {
         self.score.text = String(score)
     }
     
+    func updateScore(_ value: Int) {
+        score.setAnimated(text: String(value))
+    }
+    
     func setWord(_ word: String) {
 //        titleGame.text = word
         wordsStack.setNext(word: word)
