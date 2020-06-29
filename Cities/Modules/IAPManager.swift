@@ -37,6 +37,7 @@ class IAPManager: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObser
         super.init()
         getProducts()
         startObserving()
+        startErrorTimeout()
     }
     
     deinit {
