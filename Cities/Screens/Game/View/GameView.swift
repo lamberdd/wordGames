@@ -76,6 +76,12 @@ class GameView: UIViewController, GameViewProtocol {
         changeLetterButtonVisible = false
         backgroundImageLeading.constant = -35
         backgoundImageTrailing.constant = 35
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard)))
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func viewDidAppear(_ animated: Bool) {

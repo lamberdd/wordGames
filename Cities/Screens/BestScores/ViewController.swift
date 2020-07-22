@@ -57,6 +57,7 @@ class BestScoresViewController: UIPageViewController, UIPageViewControllerDataSo
         continueButton.setTitle(translate("continue"), for: .normal)
         continueButton.setTitleColor(.white, for: .normal)
         continueButton.setTitleColor(UIColor.white.withAlphaComponent(0.3), for: .highlighted)
+        continueButton.titleLabel?.font = UIFont(name: "Gill Sans", size: 16)
         continueButton.addTarget(self, action: #selector(continueClicked(sender:)), for: .touchUpInside)
         
         constraintConfigurator.setupContinueButton(button: continueButton, in: self.view)

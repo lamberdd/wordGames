@@ -12,7 +12,7 @@
 "ag7-7j-R76.text" = "Количество подсказок:";
 
 /* Class = "UIButton"; normalTitle = "Очистить резултаты"; ObjectID = "hvM-8m-8w6"; */
-"hvM-8m-8w6.normalTitle" = "Очистить резултаты";
+"hvM-8m-8w6.normalTitle" = "Очистить результаты";
 
 /* Class = "UILabel"; text = "Время ответа:"; ObjectID = "jME-4I-ghk"; */
 "jME-4I-ghk.text" = "Время ответа:";

@@ -71,6 +71,12 @@ class PrepareScreenViewController: UIViewController, UITableViewDelegate, UITabl
         usersNameTable.dataSource = self
         
         usersTableHeight.constant = startTableHeight
+        
+        view.addGestureRecognizer(UITapGestureRecognizer(target: self, action: 	#selector(dismissKeyboard)))
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     private func getPlayers() -> [String] {
