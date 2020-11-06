@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e8y-PU-toL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e8y-PU-toL">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -68,9 +68,6 @@
                                         <rect key="frame" x="69" y="395" width="162" height="32"/>
                                         <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="16"/>
                                         <state key="normal" title="Восстановить покупки"/>
-                                        <connections>
-                                            <action selector="restore:" destination="e8y-PU-toL" eventType="touchUpInside" id="83A-9x-VdV"/>
-                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBL-GU-y7X">
                                         <rect key="frame" x="20" y="351" width="260" height="34"/>
@@ -87,11 +84,8 @@
                                                 <integer key="value" value="17"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="buy:" destination="e8y-PU-toL" eventType="touchUpInside" id="Sne-CS-jDN"/>
-                                        </connections>
                                     </button>
-                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Oj3-Fi-1Cl">
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="Oj3-Fi-1Cl">
                                         <rect key="frame" x="140" y="358" width="20" height="20"/>
                                     </activityIndicatorView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0r-db-CqV">
@@ -227,6 +221,7 @@
                         <outlet property="buyButton" destination="NBL-GU-y7X" id="was-ci-kfF"/>
                         <outlet property="errorView" destination="OLk-Bz-igy" id="dnZ-30-kIC"/>
                         <outlet property="loaderView" destination="u47-pe-fMJ" id="0i6-oj-rH8"/>
+                        <outlet property="restoreButton" destination="KOU-kD-u41" id="NuB-ue-F3d"/>
                         <outlet property="successView" destination="qQ0-6U-qPZ" id="zBO-pQ-eEC"/>
                     </connections>
                 </viewController>

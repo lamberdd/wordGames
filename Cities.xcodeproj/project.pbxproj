@@ -18,8 +18,7 @@
 		9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3C90002421617C00A0320B /* BlackoutViewController.swift */; };
 		9A481D54248440F9007B13A6 /* BuyFullGame.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A481D56248440F9007B13A6 /* BuyFullGame.storyboard */; };
 		9A4A3E12248035C400005DAC /* ProtocolBuyFullVersionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E11248035C400005DAC /* ProtocolBuyFullVersionView.swift */; };
-		9A4A3E162480362100005DAC /* BuyFullVersionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E152480362100005DAC /* BuyFullVersionPresenter.swift */; };
-		9A4A3E18248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E17248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift */; };
+		9A4A3E162480362100005DAC /* PurchaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E152480362100005DAC /* PurchaseViewModel.swift */; };
 		9A4A3E1A24803C8B00005DAC /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4A3E1924803C8B00005DAC /* IAPManager.swift */; };
 		9A591B57247D89E0006806CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A591B59247D89E0006806CB /* InfoPlist.strings */; };
 		9A7229ED24858F4E006A67E6 /* PromocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7229EC24858F4E006A67E6 /* PromocodeService.swift */; };
@@ -129,8 +128,7 @@
 		9A481D58248440FB007B13A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/BuyFullGame.strings; sourceTree = "<group>"; };
 		9A481D5A248440FC007B13A6 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/BuyFullGame.strings; sourceTree = "<group>"; };
 		9A4A3E11248035C400005DAC /* ProtocolBuyFullVersionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBuyFullVersionView.swift; sourceTree = "<group>"; };
-		9A4A3E152480362100005DAC /* BuyFullVersionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyFullVersionPresenter.swift; sourceTree = "<group>"; };
-		9A4A3E17248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolBuyFullVersionPresenter.swift; sourceTree = "<group>"; };
+		9A4A3E152480362100005DAC /* PurchaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewModel.swift; sourceTree = "<group>"; };
 		9A4A3E1924803C8B00005DAC /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		9A591B58247D89E0006806CB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A591B5A247D89E2006806CB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -268,7 +266,7 @@
 		9A00F307247F05310065D286 /* BuyFullVersion */ = {
 			isa = PBXGroup;
 			children = (
-				9A4A3E142480360C00005DAC /* Presenter */,
+				9A4A3E142480360C00005DAC /* ViewModel */,
 				9A00F30A247F057F0065D286 /* View */,
 			);
 			path = BuyFullVersion;
@@ -292,13 +290,12 @@
 			path = Names;
 			sourceTree = "<group>";
 		};
-		9A4A3E142480360C00005DAC /* Presenter */ = {
+		9A4A3E142480360C00005DAC /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				9A4A3E152480362100005DAC /* BuyFullVersionPresenter.swift */,
-				9A4A3E17248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift */,
+				9A4A3E152480362100005DAC /* PurchaseViewModel.swift */,
 			);
-			path = Presenter;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		9A7F2F0B242BE13E00F641DA /* ChemElems */ = {
@@ -950,12 +947,11 @@
 				FBABA00C23FC4E7E00E61B0A /* ScoresTable.swift in Sources */,
 				9A3C90012421617C00A0320B /* BlackoutViewController.swift in Sources */,
 				FB25B1D423DA285E00ECB558 /* GameCoordinator.swift in Sources */,
-				9A4A3E18248036EB00005DAC /* ProtocolBuyFullVersionPresenter.swift in Sources */,
 				FBE9375322BD6EAE00E85B13 /* AppDelegate.swift in Sources */,
 				FBC7A89B23DA171900496DEC /* AlreadyUsedWordsViewController.swift in Sources */,
 				FB53F299230337BF005B1378 /* ArrayHelper.swift in Sources */,
 				FBD0F78023C648D700876394 /* WordFiles.swift in Sources */,
-				9A4A3E162480362100005DAC /* BuyFullVersionPresenter.swift in Sources */,
+				9A4A3E162480362100005DAC /* PurchaseViewModel.swift in Sources */,
 				9A00F30C247F05930065D286 /* BuyFullVersionView.swift in Sources */,
 				FBB22D7623FF066D00F4903E /* ConstraintConfiguratorBestScores.swift in Sources */,
 				FBC6E0472389655F002A87FD /* ScoresViewController.swift in Sources */,
@@ -1253,6 +1249,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.vladkazmirchuk.wordgames;
 				PRODUCT_NAME = "Игра слов";
 				SWIFT_VERSION = 5.0;
@@ -1273,6 +1270,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.vladkazmirchuk.wordgames;
 				PRODUCT_NAME = "Игра слов";
 				SWIFT_VERSION = 5.0;

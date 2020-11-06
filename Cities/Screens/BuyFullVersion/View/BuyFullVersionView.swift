@@ -7,16 +7,20 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
-class BuyFullVersionView: BlackoutViewController, ProtocolBuyFullVersionView {
+class BuyFullVersionView: BlackoutViewController {
 
-    var presenter: ProtocolBuyFullVersionPresenter!
+    let bag = DisposeBag()
+    let viewModel: PurchaseViewModel = PurchaseViewModel()
     @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var successView: UIView!
     @IBOutlet weak var errorView: UIView!
     @IBOutlet weak var buttonLoader: UIActivityIndicatorView!
     @IBOutlet weak var buyButton: UIButton!
     
+    @IBOutlet weak var restoreButton: UIButton!
     var onClose: (()->Void)? = nil
     var purchaseText: String = ""
     
@@ -24,60 +28,36 @@ class BuyFullVersionView: BlackoutViewController, ProtocolBuyFullVersionView {
         onClose?()
         dismiss(animated: true)
     }
-    @IBAction func restore(_ sender: UIButton) {
-        presenter.restore()
-    }
-    @IBAction func buy(_ sender: UIButton) {
-        if buttonLoader.isAnimating { return } // Игнорируем нажатия, если отображается загрузка
-        presenter.buy()
-    }
+ 
     @IBAction func enterPromo(_ sender: UIButton) {
         showInputAlert(title: translate("promocode")) { [weak self] (code) in
-            self?.presenter.checkPromo(code)
+            self?.viewModel.checkPromo.accept(code)
         }
     }
     
     deinit {
-        print("ButFullView deinited")
+        print("PurchaseView deinited")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        presenter = BuyFullVersionPresenter(view: self)
-        // Do any additional setup after loading the view.
-    }
-    
-    func showLoading() {
-        loaderView.isHidden = false
-    }
-    
-    func stopLoading() {
-        loaderView.isHidden = true
-    }
-    
-    func showSuccessPurchase() {
-        successView.isHidden = false
-    }
-    
-    func showError() {
-        errorView.isHidden = false
-    }
-    
-    func buttonLoading(_ show: Bool) {
-        if show {
-            buyButton.setTitle("", for: .normal)
-            buttonLoader.startAnimating()
-        } else {
-            buyButton.setTitle(purchaseText, for: .normal)
-            buttonLoader.stopAnimating()
-        }
-    }
-    
-    func setPurchaseButtonTitle(_ title: String) {
-        purchaseText = title
-        if buttonLoader.isAnimating == false {
-            buyButton.setTitle(title, for: .normal)
-        }
+        
+        buyButton.rx.tap.bind(to: viewModel.purchaseClick).disposed(by: bag)
+        restoreButton.rx.tap.bind(to: viewModel.restoreClick).disposed(by: bag)
+        
+        viewModel.purchaseButtonLoader.asDriver().drive(buttonLoader.rx.isAnimating).disposed(by: bag)
+        viewModel.purchaseButtonTitle.asDriver().drive(buyButton.rx.title()).disposed(by: bag)
+        
+        viewModel.loading.asDriver().map({ !$0 }).drive(loaderView.rx.isHidden).disposed(by: bag)
+        
+        //Отрицаем полученное значение для работы с isHidden
+        viewModel.error.asDriver().map({ !$0 }).drive(errorView.rx.isHidden).disposed(by: bag)
+        viewModel.purchased.asDriver().map({ !$0 }).drive(successView.rx.isHidden).disposed(by: bag)
+        
+        viewModel.alertText.observeOn(MainScheduler.instance).subscribe(onNext: { (text) in
+            self.showAlert(text: text)
+        }).disposed(by: bag)
+        
     }
 
     
