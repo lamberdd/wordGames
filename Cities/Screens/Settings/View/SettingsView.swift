@@ -39,6 +39,9 @@ class SettingsView: UIViewController {
         updateAnswerTime()
     }
     
+    deinit {
+        print("Settings ViewController deinited")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         if #available(iOS 13.0, *) {

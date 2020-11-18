@@ -54,8 +54,8 @@ class BuyFullVersionView: BlackoutViewController {
         viewModel.error.asDriver().map({ !$0 }).drive(errorView.rx.isHidden).disposed(by: bag)
         viewModel.purchased.asDriver().map({ !$0 }).drive(successView.rx.isHidden).disposed(by: bag)
         
-        viewModel.alertText.observeOn(MainScheduler.instance).subscribe(onNext: { (text) in
-            self.showAlert(text: text)
+        viewModel.alertText.observeOn(MainScheduler.instance).subscribe(onNext: { [weak self] (text) in
+            self?.showAlert(text: text)
         }).disposed(by: bag)
         
     }

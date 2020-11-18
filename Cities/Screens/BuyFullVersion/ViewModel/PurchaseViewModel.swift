@@ -28,6 +28,9 @@ class PurchaseViewModel {
     let error = BehaviorRelay<Bool>(value: false)
     let purchased = BehaviorRelay<Bool>(value: false)
     
+    deinit {
+        print("Purchase ViewModel deinited")
+    }
     init() {
         if AppSettings.global.isFullVersion {
             setSuccessState()
@@ -44,16 +47,16 @@ class PurchaseViewModel {
             }
         }
         
-        purchaseClick.subscribe { (_) in
-            self.buy()
+        purchaseClick.subscribe {  [weak self] (_) in
+            self?.buy()
         }.disposed(by: bag)
         
-        restoreClick.subscribe { (_) in
-            self.restore()
+        restoreClick.subscribe { [weak self] (_) in
+            self?.restore()
         }.disposed(by: bag)
         
-        checkPromo.subscribe(onNext: { (promoText) in
-            self.checkPromo(promoText)
+        checkPromo.subscribe(onNext: { [weak self] (promoText) in
+            self?.checkPromo(promoText)
         }).disposed(by: bag)
     }
     
