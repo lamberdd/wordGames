@@ -13,6 +13,7 @@ class MainScreenCoordinator {
     
     private let mainVC: MainScreenViewController
     private var onUpdateScreen: (()->Void)? = nil
+    private var prepareScreenCoordinator: PrepareScreenCoordinator? = nil
     
     init(viewController: MainScreenViewController) {
         self.mainVC = viewController
@@ -66,6 +67,9 @@ class MainScreenCoordinator {
     private func setupPrepareScreen(_ viewController: UIViewController, gameType: GameType) {
         guard let navigationPrepare = viewController as? UINavigationController else { return }
         guard let prepareScreen = navigationPrepare.topViewController as? PrepareScreenViewController else { return }
-        prepareScreen.gameType = gameType
+        let prepareViewModel = PrepareScreenViewModel(gameType: gameType)
+        prepareScreenCoordinator = PrepareScreenCoordinator(rootController: mainVC, prepareView: prepareScreen, viewModel: prepareViewModel)
+        prepareScreenCoordinator?.onClose = { print("Prepare coordinator onClose"); self.prepareScreenCoordinator = nil }
+        prepareScreen.viewModel = prepareViewModel
     }
 }

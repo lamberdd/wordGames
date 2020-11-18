@@ -15,6 +15,7 @@ class GameCoordinator {
     private let gameSettings: GameInitialSettings
     private weak var gameView: GameView? = nil
     private var fullScreenAd: FullScreenAd? = nil
+    var onCloseToMainScreen: (()->Void)? = nil
     
     deinit {
         print("Coordinator deinited")
@@ -89,7 +90,7 @@ class GameCoordinator {
     }
     
     func closeGame() {
-        gameView?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        gameView?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: { self.onCloseToMainScreen?()} )
     }
     
     func closeGameToPrepare() {
