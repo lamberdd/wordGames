@@ -23,6 +23,7 @@
 		9A591B57247D89E0006806CB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A591B59247D89E0006806CB /* InfoPlist.strings */; };
 		9A7229ED24858F4E006A67E6 /* PromocodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7229EC24858F4E006A67E6 /* PromocodeService.swift */; };
 		9A7B6A8E246DC3F700925A88 /* TimeStringHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */; };
+		9A7E452025C07D260090171C /* RemoteNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7E451F25C07D260090171C /* RemoteNotifications.swift */; };
 		9A7F2F0D242BE15900F641DA /* chemElems_ru.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0C242BE15900F641DA /* chemElems_ru.json */; };
 		9A7F2F0F242BE25500F641DA /* chemElems_en.json in Resources */ = {isa = PBXBuildFile; fileRef = 9A7F2F0E242BE25500F641DA /* chemElems_en.json */; };
 		9A8225D6247DA90D0027A4CA /* FullScreenAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8225D5247DA90D0027A4CA /* FullScreenAd.swift */; };
@@ -138,11 +139,13 @@
 		9A7B6A8C246DBC7F00925A88 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		9A7B6A8D246DC3F700925A88 /* TimeStringHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeStringHelper.swift; sourceTree = "<group>"; };
 		9A7B6A90246DC5F500925A88 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Settings.strings; sourceTree = "<group>"; };
+		9A7E451F25C07D260090171C /* RemoteNotifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteNotifications.swift; sourceTree = "<group>"; };
 		9A7F2F0C242BE15900F641DA /* chemElems_ru.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chemElems_ru.json; sourceTree = "<group>"; };
 		9A7F2F0E242BE25500F641DA /* chemElems_en.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = chemElems_en.json; sourceTree = "<group>"; };
 		9A8225D5247DA90D0027A4CA /* FullScreenAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenAd.swift; sourceTree = "<group>"; };
 		9A8225D8247DAEA70027A4CA /* GameAdHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAdHelper.swift; sourceTree = "<group>"; };
 		9A83CB46246C7981003454FE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9A887C5125B8B40500B3FEA4 /* Игра слов.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Игра слов.entitlements"; sourceTree = "<group>"; };
 		9AC8159925630D2C0064E170 /* PrepareScreenCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareScreenCoordinator.swift; sourceTree = "<group>"; };
 		9ADBD9F1244F8F71008CE8D7 /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		9ADBD9F3244F9265008CE8D7 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
@@ -438,6 +441,7 @@
 				FBD0F77F23C648D700876394 /* WordFiles.swift */,
 				9A8225D5247DA90D0027A4CA /* FullScreenAd.swift */,
 				9A4A3E1924803C8B00005DAC /* IAPManager.swift */,
+				9A7E451F25C07D260090171C /* RemoteNotifications.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -664,6 +668,7 @@
 		FBE9375122BD6EAE00E85B13 /* Cities */ = {
 			isa = PBXGroup;
 			children = (
+				9A887C5125B8B40500B3FEA4 /* Игра слов.entitlements */,
 				FB3121F322BFB402002C8342 /* Screens */,
 				FBABA00D23FC557400E61B0A /* ViewControllers */,
 				FB3121F022BFB109002C8342 /* Storyboards */,
@@ -999,6 +1004,7 @@
 				FB6CF6F62329753700FE017A /* Notification.swift in Sources */,
 				FBFCE922232E9AF40042465F /* NotificationImage.swift in Sources */,
 				9A8225D9247DAEA70027A4CA /* GameAdHelper.swift in Sources */,
+				9A7E452025C07D260090171C /* RemoteNotifications.swift in Sources */,
 				FB499250230C6DF900559F5D /* Player.swift in Sources */,
 				9ADCB8AC255ADF5200A7720E /* PrepareScreenViewModel.swift in Sources */,
 				FBABA01523FC586300E61B0A /* ViewController.swift in Sources */,
@@ -1273,8 +1279,10 @@
 			baseConfigurationReference = 4D2CFF8EE8BFA9E3B2EC1C74 /* Pods-Cities.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Cities/Игра слов.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q7DR6N94Z;
+				EXCLUDED_ARCHS = armv7;
 				INFOPLIST_FILE = Cities/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1294,8 +1302,10 @@
 			baseConfigurationReference = A9DCD43D49B13D9110850CC2 /* Pods-Cities.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Cities/Игра слов.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6Q7DR6N94Z;
+				EXCLUDED_ARCHS = armv7;
 				INFOPLIST_FILE = Cities/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1328,7 +1338,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cities.app/Cities";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Игра слов.app/Игра слов";
 			};
 			name = Debug;
 		};
@@ -1350,7 +1360,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Cities.app/Cities";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Игра слов.app/Игра слов";
 			};
 			name = Release;
 		};
