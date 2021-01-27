@@ -10,7 +10,7 @@ import Foundation
 
 class GameAdHelper {
     
-    let numberClicksToShow = 14
+    let numberClicksToShow = 12
     var clicksCount = 0
     
     weak var coordinator: GameCoordinator?
