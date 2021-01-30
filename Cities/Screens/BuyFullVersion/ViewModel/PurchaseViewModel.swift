@@ -12,9 +12,10 @@ import RxCocoa
 
 class PurchaseViewModel {
     
-    let iapManager = IAPManager()
+    private let iapManager: IAPManager
+    private let promoService: PromocodeService
     
-    let bag = DisposeBag()
+    private let bag = DisposeBag()
     
     let purchaseClick = PublishRelay<Void>()
     let purchaseButtonLoader = BehaviorRelay<Bool>(value: true)
@@ -31,7 +32,10 @@ class PurchaseViewModel {
     deinit {
         print("Purchase ViewModel deinited")
     }
-    init() {
+    init(iapManager: IAPManager = IAPManager(), promoService: PromocodeService = PromocodeService()) {
+        self.iapManager = iapManager
+        self.promoService = promoService
+        
         if AppSettings.global.isFullVersion {
             setSuccessState()
         } else {
@@ -66,7 +70,6 @@ class PurchaseViewModel {
             return
         }
         loading.accept(true)
-        let promoService = PromocodeService()
         promoService.checkCode(code: promo) { (status) in
             DispatchQueue.main.async {
                 self.loading.accept(false)
